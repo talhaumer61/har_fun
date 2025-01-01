@@ -1,0 +1,8 @@
+@include("site.components.header", ['title' => 'About Us - HARFUN'])
+@include("site.components.about_us.breadcrumb")
+@include("site.components.about_us.about")
+@include("site.components.about_us.benefits")
+@include("site.components.about_us.how_it_works")
+@include("site.components.about_us.reviews")
+@include("site.components.about_us.portal_intro")
+@include("site.components.footer")
