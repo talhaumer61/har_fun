@@ -8,7 +8,7 @@
 									<h2 class="text-white">Get the job of your dreams quickly.</h2>
 								</div>
 								<p class="text-white text-md mb-55 lg-mb-30">Commonly used in the graphic, print publishing industris for previewing visual mockups. limited social discrimination.</p>
-                                <a href="job-list-v1.html" class="find-job-btn d-flex align-items-center text-white">
+                                <a href="/jobs" class="find-job-btn d-flex align-items-center text-white">
                                     <span class="fw-500">Find your job.</span>
                                     <span class="ms-1"> <u>Explore all</u></span>
                                     <span class="ms-auto"><i class="bi bi-chevron-right"></i></span>

@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-lg-5">
                     <ul class="btn-group style-none d-flex justify-content-center justify-content-lg-end">
-                        <li class="me-2"><a href="job-list-v1.html" class="btn-seven border6">Looking for job?</a></li>
-                        <li class="ms-2"><a href="signup.html" class="btn-five border6">Post a job</a></li>
+                        <li class="me-2"><a href="/jobs" class="btn-seven border6">Looking for job?</a></li>
+                        <li class="ms-2"><a href="/post-job" class="btn-five border6">Post a job</a></li>
                     </ul>
                 </div>
             </div>

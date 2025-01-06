@@ -7,7 +7,7 @@
                         <h2 class="text-white">About us</h2>
                     </div>
                     <ul class="style-none d-flex justify-content-center page-pagination mt-15">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><i class="bi bi-chevron-right"></i></li>
                         <li>About</li>
                     </ul>

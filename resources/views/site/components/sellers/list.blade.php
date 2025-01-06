@@ -29,9 +29,9 @@
                         <div class="row">
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card favourite text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_01.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Julia Ark</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_01.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Julia Ark</a></h4>
                                     <div class="candidate-post">Graphic Designer</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Design</li>
@@ -58,10 +58,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -69,9 +69,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Juan Marko</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Juan Marko</a></h4>
                                     <div class="candidate-post">Javascript Developer</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Java</li>
@@ -98,10 +98,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -109,9 +109,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card favourite text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Rashed ka</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Rashed ka</a></h4>
                                     <div class="candidate-post">UI/UX Designer</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Design</li>
@@ -137,10 +137,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -148,9 +148,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_04.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Julia Ark</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_04.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Julia Ark</a></h4>
                                     <div class="candidate-post">Graphic Designer</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Design</li>
@@ -177,10 +177,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -188,9 +188,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card favourite text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Juan Marko</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Juan Marko</a></h4>
                                     <div class="candidate-post">Marketing Expert</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Account</li>
@@ -216,10 +216,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -227,9 +227,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_05.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Juliana Shofie</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_05.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Juliana Shofie</a></h4>
                                     <div class="candidate-post">Data Entry</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Data</li>
@@ -255,10 +255,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -266,9 +266,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card favourite text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_06.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Shani Milar</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_06.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Shani Milar</a></h4>
                                     <div class="candidate-post">Telemarketing & Sales</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Telemarketing</li>
@@ -294,10 +294,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -305,9 +305,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Juan Marko</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Juan Marko</a></h4>
                                     <div class="candidate-post">Marketing Expert</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Java</li>
@@ -333,10 +333,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -344,9 +344,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_07.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Juliana Shofie</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_07.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Juliana Shofie</a></h4>
                                     <div class="candidate-post">Data Entry</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Data</li>
@@ -372,10 +372,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -383,9 +383,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card favourite text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_08.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Julia Ark</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_08.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Julia Ark</a></h4>
                                     <div class="candidate-post">Graphic Designer</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Design</li>
@@ -412,10 +412,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -423,9 +423,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_09.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Mark Cena</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar online position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_09.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Mark Cena</a></h4>
                                     <div class="candidate-post">Artist</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Design</li>
@@ -452,10 +452,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -463,9 +463,9 @@
                             </div>
                             <div class="col-xxl-3 col-lg-4 col-sm-6 d-flex">
                                 <div class="candidate-profile-card favourite text-center grid-layout border-0 mb-25">
-                                    <a href="candidate-profile-v1.html" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
-                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
-                                    <h4 class="candidate-name mt-15 mb-0"><a href="candidate-profile-v1.html" class="tran3s">Juliana Shofie</a></h4>
+                                    <a href="/sellers/test-seller" class="save-btn tran3s"><i class="bi bi-heart"></i></a>
+                                    <div class="cadidate-avatar position-relative d-block m-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                    <h4 class="candidate-name mt-15 mb-0"><a href="/sellers/test-seller" class="tran3s">Juliana Shofie</a></h4>
                                     <div class="candidate-post">Graphic Designer</div>
                                     <ul class="cadidate-skills style-none d-flex flex-wrap align-items-center justify-content-center justify-content-md-between pt-30 sm-pt-20 pb-10">
                                         <li>Design</li>
@@ -492,10 +492,10 @@
                                     </div>
                                     <div class="row gx-2 pt-25 sm-pt-10">
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="profile-btn tran3s w-100 mt-5">View Profile</a>
+                                            <a href="/sellers/test-seller" class="profile-btn tran3s w-100 mt-5">View Profile</a>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="candidate-profile-v1.html" class="msg-btn tran3s w-100 mt-5">Message</a>
+                                            <a href="/sellers/test-seller" class="msg-btn tran3s w-100 mt-5">Message</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -508,12 +508,12 @@
                     <div class="accordion-box list-style">
                         <div class="candidate-profile-card favourite list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_01.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_01.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Julia Ark</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Julia Ark</a></h4>
                                                 <div class="candidate-post">Graphic Designer</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -540,8 +540,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -551,12 +551,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card favourite list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Shofie Ana</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Shofie Ana</a></h4>
                                                 <div class="candidate-post">Artist</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -583,8 +583,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -594,12 +594,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_02.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Riad Mahfuz</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Riad Mahfuz</a></h4>
                                                 <div class="candidate-post">Telemarketing & Sales</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -626,8 +626,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -637,12 +637,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card favourite list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_03.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Julia Ark</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Julia Ark</a></h4>
                                                 <div class="candidate-post">Graphic Designer</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -669,8 +669,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -680,12 +680,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_04.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_04.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Jannat Ka</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Jannat Ka</a></h4>
                                                 <div class="candidate-post">Marketing Expert</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -712,8 +712,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -723,12 +723,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card favourite list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_05.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_05.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Mahmud Amin</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Mahmud Amin</a></h4>
                                                 <div class="candidate-post">App Designer</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -755,8 +755,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -766,12 +766,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card favourite list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_06.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_06.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Zubayer Hasan</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Zubayer Hasan</a></h4>
                                                 <div class="candidate-post">Graphic Designer</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -798,8 +798,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -809,12 +809,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_07.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_07.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Maria Henna</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Maria Henna</a></h4>
                                                 <div class="candidate-post">Designer</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -841,8 +841,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -852,12 +852,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card favourite list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_08.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_08.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Sakil Islam</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Sakil Islam</a></h4>
                                                 <div class="candidate-post">Marketing Expert</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -884,8 +884,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -895,12 +895,12 @@
                         <!-- /.candidate-profile-card -->
                         <div class="candidate-profile-card list-layout border-0 mb-25">
                             <div class="d-flex">
-                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="candidate-profile-v1.html" class="rounded-circle"><img src="{{asset('site/images/candidates/img_09.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
+                                <div class="cadidate-avatar online position-relative d-block me-auto ms-auto"><a href="/sellers/test-seller" class="rounded-circle"><img src="{{asset('site/images/candidates/img_09.jpg')}}" alt="" class="lazy-img rounded-circle"></a></div>
                                 <div class="right-side">
                                     <div class="row gx-1">
                                         <div class="col-xl-4">
                                             <div class="position-relative">
-                                                <h4 class="candidate-name mb-0"><a href="candidate-profile-v1.html" class="tran3s">Shofie Elina</a></h4>
+                                                <h4 class="candidate-name mb-0"><a href="/sellers/test-seller" class="tran3s">Shofie Elina</a></h4>
                                                 <div class="candidate-post">IT Specialist</div>
                                                 <ul class="cadidate-skills style-none d-flex align-items-center">
                                                     <li>Design</li>
@@ -927,8 +927,8 @@
                                         </div>
                                         <div class="col-xl-2 col-md-4">
                                             <div class="d-flex justify-content-lg-end">
-                                                <a href="candidate-profile-v1.html" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
-                                                <a href="candidate-profile-v1.html" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
+                                                <a href="/sellers/test-seller" class="save-btn text-center rounded-circle tran3s mt-10"><i class="bi bi-heart"></i></a>
+                                                <a href="/sellers/test-seller" class="profile-btn tran3s ms-md-2 mt-10 sm-mt-20">View Profile</a>
                                             </div>
                                         </div>
                                     </div>

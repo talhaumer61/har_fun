@@ -172,7 +172,7 @@
 				</div>
 
 				<div class="text-center mt-80 lg-mt-30 wow fadeInUp">
-					<div class="btn-eight fw-500">Do you want to post a job for your company? <span>We can help.</span> <a href="signup.html">Click here</a></div>
+					<div class="btn-eight fw-500">Do you want to post a job for your company? <span>We can help.</span> <a href="sign-up">Click here</a></div>
 				</div>
             </div>
         </section>

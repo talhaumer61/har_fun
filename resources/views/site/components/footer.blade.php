@@ -65,7 +65,7 @@
 							</ul>
 						</div>
 						<div class="col-lg-4 order-lg-2">
-							<p class="text-center mb-15">Copyright @2024 HAR-FUN.</p>
+							<p class="text-center mb-15">Copyright © {{date('Y')}} HAR-FUN.</p>
 						</div>
 					</div>
 				</div>

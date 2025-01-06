@@ -69,7 +69,7 @@
         </div>
         <!-- ./bg-wrapper -->
         <div class="text-center mt-50 sm-mt-40 wow fadeInUp">
-            <div class="btn-eight style-two fw-500">Don’t find the answer? We can help. <a href="faq.html">Click here</a></div>
+            <div class="btn-eight style-two fw-500">Don’t find the answer? We can help. <a href="/faq">Click here</a></div>
         </div>
     </div>
 </section>

@@ -9,14 +9,14 @@ class SiteSellersController extends Controller
 {
     public function index($id = null){
         if ($id) {
-            // Fetch single job details
+            // Fetch single seller details
             $seller = [
                 'name' => 'Seller ' . $id, 
             ];
             return view('site.sellers',compact('seller'));
 
         } else {
-            // Fetch job list
+            // Fetch seller list
             return view('site.sellers');
             
         }

@@ -11,7 +11,7 @@
 						<div class="row">
 							<div class="col-xl-9 col-lg-8">
 								<div class="job-search-one position-relative me-xl-5">
-									<form action="https://html.creativegigstf.com/jobi/jobi/job-grid-v1.html">
+									<form action="/jobs">
 										<div class="row">
 											<div class="col-md-5">
 												<div class="input-box">

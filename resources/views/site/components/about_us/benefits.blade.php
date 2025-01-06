@@ -12,7 +12,7 @@
                         <li>Get top 3% experts for your project</li>
                         <li>Protected payments system</li>
                     </ul>
-                    <a href="signup.html" class="btn-one lg mt-50 md-mt-30">Post a Job</a>
+                    <a href="/post-job" class="btn-one lg mt-50 md-mt-30">Post a Job</a>
                 </div>
             </div>
             <div class="col-lg-7 col-md-11 m-auto order-lg-first">
