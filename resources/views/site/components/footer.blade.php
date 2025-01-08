@@ -15,7 +15,7 @@
 							<h5 class="footer-title">Services​</h5>
 							<ul class="footer-nav-link style-none">
 								<li><a href="/jobs">Browse Jobs</a></li>
-								<li><a href="/sellers">Candidates</a></li>
+								<li><a href="/sellers">Sellers</a></li>
 							</ul>
 						</div>
 						<div class="col-lg-2 col-md-3 col-sm-4 mb-20">

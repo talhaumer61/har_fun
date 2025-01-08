@@ -96,7 +96,7 @@
 									data-bs-auto-close="outside" aria-expanded="false">Dashboard
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="/dashboard/seller" class="dropdown-item" target="_blank"><span>Worker Dashboard</span></a></li>
+									<li><a href="/dashboard/seller" class="dropdown-item" target="_blank"><span>Seller Dashboard</span></a></li>
 									<li><a href="/dashboard/customer" class="dropdown-item" target="_blank"><span>Customer Dashboard</span></a></li>
 								</ul>
 							</li>

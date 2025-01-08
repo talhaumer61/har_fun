@@ -57,8 +57,8 @@ class SiteDashboardController extends Controller
             return view('site.post_job');
         
     }
-    public function saved_workers(){
-        return view('site.saved_workers');
+    public function saved_sellers(){
+        return view('site.saved_sellers');
     }
     public function memberships(){
         return view('site.memberships');

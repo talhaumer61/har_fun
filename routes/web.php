@@ -40,7 +40,7 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
     Route::get('/my-jobs', [SiteDashboardController::class,'my_jobs']);
     Route::get('/customer/messages', [SiteDashboardController::class,'customer_messages']);
     Route::get('/post-job', [SiteDashboardController::class,'post_job']);
-    Route::get('/saved-workers', [SiteDashboardController::class,'saved_workers']);
+    Route::get('/saved-sellers', [SiteDashboardController::class,'saved_sellers']);
     Route::get('/memberships', [SiteDashboardController::class,'memberships']);
 
 });

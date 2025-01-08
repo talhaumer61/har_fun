@@ -51,9 +51,9 @@
                     <img src="{{asset('site/dashboard/icon/icon_39.svg')}}" alt="" class="lazy-img">
                     <span>Post a Job</span>
                 </a></li>
-                <li><a href="/saved-workers" class="d-flex w-100 align-items-center">
+                <li><a href="/saved-sellers" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_6.svg')}}" alt="" class="lazy-img">
-                    <span>Saved Workers</span>
+                    <span>Saved Sellers</span>
                 </a></li>
                 <li><a href="/memberships" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_40.svg')}}" alt="" class="lazy-img">
