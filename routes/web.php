@@ -1,9 +1,14 @@
 <?php
 
+use App\Http\Controllers\admin\AdminAuthController;
+use App\Http\Controllers\admin\AdminDashboardController;
+
 use App\Http\Controllers\site\SiteDashboardController;
 use App\Http\Controllers\site\SiteHomeController;
 use App\Http\Controllers\site\SiteJobsController;
 use App\Http\Controllers\site\SiteSellersController;
+use App\Http\Middleware\admin\Authenticate;
+use App\Http\Middleware\admin\RedirectIfAuthenticated;
 use App\Http\Middleware\site\NormalizeRouteCase;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +33,7 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
     Route::get('/jobs/{id?}', [SiteJobsController::class,'index']);
     Route::get('/sellers/{id?}', [SiteSellersController::class,'index']);
 
-    // DASHBOARD ROUTES
+    // SITE DASHBOARD ROUTES
     Route::get('/dashboard/{type?}', [SiteDashboardController::class,'index']);
     Route::get('/seller-profile/{id?}', [SiteDashboardController::class,'seller_profile']);
     Route::get('/my-resume/{id?}', [SiteDashboardController::class,'my_resume']);
@@ -43,4 +48,23 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
     Route::get('/saved-sellers', [SiteDashboardController::class,'saved_sellers']);
     Route::get('/memberships', [SiteDashboardController::class,'memberships']);
 
+
+
+    // ADMIN ROUTES
+    Route::prefix('portal')->group(function () {
+        // redirection to login when user not logged-in
+        Route::middleware([RedirectIfAuthenticated::class])->group(function () {
+            Route::get('/login', function () {
+                return view('admin.login');
+            })->name('login');
+            Route::post('/login', [AdminAuthController::class, 'login'])->name('login.post');
+        });
+        Route::middleware([Authenticate::class])->group(function () {
+            Route::get('/', [AdminDashboardController::class,'index']);
+            Route::get('/logout', [AdminAuthController::class, 'logout']);
+
+        });
+    });
+    
+    
 });
