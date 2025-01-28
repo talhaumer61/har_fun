@@ -52,10 +52,8 @@
 	<!-- Footer Start -->
 	<footer class="footer mt-auto py-3 bg-white text-center">
 		<div class="container">
-			<span class="text-center">Copyright © <span id="year">2023</span>
-				<a href="javascript:void(0)" class="text-primary">Synto</a>.
-				Designed with <span class="ri ri-heart-fill text-danger"></span> by
-				<a class="text-primary" href="javascript:void(0)"> Spruko </a> All rights reserved </span>
+			<span class="text-center">Copyright © <span id="year">{{ date('Y') }}</span>
+				<a href="javascript:void(0)" class="text-primary">Har-fun</a>. All rights reserved </span>
 		</div>
 	</footer>
 	<!-- Footer End -->

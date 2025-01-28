@@ -8,13 +8,12 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Admin Dashboard </title>
-    <meta name="Description" content="Blazorstrap Responsive Admin Web Dashboard Template">
-    <meta name="Author" content="Spruko Technologies Private Limited">
-	<meta name="keywords" content="blazor, dashboard admin, blazor c#, admin dashboard template, admin, blazor net, admin panel, blazor template, dashboard, blazorstrap admin template, html dashboard template, net blazor, css and html, html admin template, admin theme, template dashboard, admin dashboard">
+    <title> Admin Portal - HARFUN </title>
+    <meta name="Description" content="">
+	<meta name="keywords" content="">
 
     <!-- Favicon -->
-    <link rel="icon" href="https://spruko.com/demo/synto/blazor/dist/assets/img/brand-logos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('site/images/fav-icon/icon.png')}}" type="image/x-icon">
 
     <!-- Choices JS -->
     <script src="{{asset('admin/libs/choices.js/public/assets/scripts/choices.min.js')}}"></script>
@@ -51,4 +50,4 @@
 
 <body>
 
-@include('admin.components.switcher')
+{{-- @include('admin.components.switcher') --}}

@@ -13,13 +13,13 @@
 			   <!-- Start::header-element -->
 			   <div class="header-element">
 				   <div class="horizontal-logo">
-					   <a href="index.html" class="header-logo">
-						   <img src="{{asset('admin/img/brand-logos/desktop-logo.png')}}" alt="logo" class="desktop-logo">
-						   <img src="{{asset('admin/img/brand-logos/toggle-logo.png')}}" alt="logo" class="toggle-logo">
-						   <img src="{{asset('admin/img/brand-logos/desktop-dark.png')}}" alt="logo" class="desktop-dark">
-						   <img src="{{asset('admin/img/brand-logos/toggle-dark.png')}}" alt="logo" class="toggle-dark">
-						   <img src="{{asset('admin/img/brand-logos/desktop-white.png')}}" alt="logo" class="desktop-white">
-						   <img src="{{asset('admin/img/brand-logos/toggle-white.png')}}" alt="logo" class="toggle-white">
+					   <a href="/portal" class="header-logo">
+						   <img src="{{asset('site/images/logo/logo_01.png')}}" alt="logo" class="desktop-logo">
+						   <img src="{{asset('site/images/fav-icon/icon.png')}}" alt="logo" class="toggle-logo">
+						   <img src="{{asset('site/images/logo/logo_01.png')}}" alt="logo" class="desktop-dark">
+						   <img src="{{asset('site/images/fav-icon/icon.png')}}" alt="logo" class="toggle-dark">
+						   <img src="{{asset('site/images/logo/logo_01.png')}}" alt="logo" class="desktop-white">
+						   <img src="{{asset('site/images/fav-icon/icon.png')}}" alt="logo" class="toggle-white">
 					   </a>
 				   </div>
 			   </div>
@@ -146,138 +146,6 @@
 			   </div>
 			   <!-- End::header-element -->
 
-			   <!-- Start::header-element -->
-			   <div class="header-element cart-dropdown">
-				   <!-- Start::header-link|dropdown-toggle -->
-				   <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown">
-					   <i class="ri-shopping-basket-line  header-link-icon"></i>
-					   <span class="badge bg-danger rounded-pill header-icon-badge" id="cart-icon-badge">4</span>
-				   </a>
-				   <!-- End::header-link|dropdown-toggle -->
-				   <!-- Start::main-header-dropdown -->
-				   <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
-					   <div class="header-dropdown bg-primary text-fixed-white rounded-top">
-						   <div class="d-flex align-items-center justify-content-between">
-							   <p class="mb-0 fs-15 fw-semibold">Shopping Cart</p>
-							   <span class="badge badge-light-2" id="cart-data">4 Items</span>
-						   </div>
-					   </div>
-					   <div><hr class="dropdown-divider"></div>
-						   <ul class="list-unstyled mb-0" id="header-cart-items-scroll">
-							   <li class="dropdown-item border-bottom-0">
-								   <div class="d-flex align-items-start cart-dropdown-item">
-									   <img src="{{asset('admin/img/ecommerce/products/1')}}.png" alt="img" class="avatar avatar  br-5 me-3 p-2 bg-gray-100">
-									   <div class="flex-grow-1">
-										   <div class="d-flex align-items-start justify-content-between mb-0">
-											   <div class="mb-0 fs-14 text-default fw-medium">
-												   <a href="cart.html">Black Heals For Women</a>
-											   </div>
-											   <div>
-												   <a href="javascript:void(0);" class="header-cart-remove float-end dropdown-item-close"><i class="ri-close-circle-line"></i></a>
-											   </div>
-										   </div>
-										   <div class="min-w-fit-content d-flex align-items-start justify-content-between">
-											   <ul class="header-product-item d-flex">
-												   <li>$699</li>
-												   <li class="text-decoration-line-through text-muted">$999</li>
-											   </ul>
-										   </div>
-									   </div>
-								   </div>
-							   </li>
-							   <li class="dropdown-item border-bottom-0">
-								   <div class="d-flex align-items-start cart-dropdown-item">
-									   <img src="{{asset('admin/img/ecommerce/products/2')}}.png" alt="img" class="avatar avatar  br-5 me-3 p-2 bg-gray-100">
-									   <div class="flex-grow-1">
-										   <div class="d-flex align-items-start justify-content-between mb-0">
-											   <div class="mb-0 fs-14 text-default fw-medium">
-												   <a href="cart.html">Tshirt For Men</a>
-											   </div>
-											   <div>
-												   <a href="javascript:void(0);" class="header-cart-remove float-end dropdown-item-close"><i class="ri-close-circle-line"></i></a>
-											   </div>
-										   </div>
-										   <div class="min-w-fit-content d-flex align-items-start justify-content-between">
-											   <ul class="header-product-item">
-												   <li>$245</li>
-												   <li><span class="text-decoration-line-through text-muted">$599</span></li>
-											   </ul>
-										   </div>
-									   </div>
-								   </div>
-							   </li>
-							   <li class="dropdown-item border-bottom-0">
-								   <div class="d-flex align-items-start cart-dropdown-item">
-									   <img src="{{asset('admin/img/ecommerce/products/9')}}.png" alt="img" class="avatar avatar  br-5 me-3 p-2 bg-gray-100">
-									   <div class="flex-grow-1">
-										   <div class="d-flex align-items-start justify-content-between mb-0">
-											   <div class="mb-0 fs-14 text-default fw-medium">
-												   <a href="cart.html">Travel Bag For Womens</a>
-											   </div>
-											   <div>
-												   <a href="javascript:void(0);" class="header-cart-remove float-end dropdown-item-close"><i class="ri-close-circle-line"></i></a>
-											   </div>
-										   </div>
-										   <div class="min-w-fit-content d-flex align-items-start justify-content-between">
-											   <ul class="header-product-item d-flex">
-												   <li>$299</li>
-												   <li class="text-decoration-line-through text-muted">$399</li>
-											   </ul>
-										   </div>
-									   </div>
-								   </div>
-							   </li>
-							   <li class="dropdown-item border-bottom-0">
-								   <div class="d-flex align-items-start cart-dropdown-item">
-									   <img src="{{asset('admin/img/ecommerce/products/10')}}.png" alt="img" class="avatar avatar  br-5 me-3 p-2 bg-gray-100">
-									   <div class="flex-grow-1">
-										   <div class="d-flex align-items-start justify-content-between mb-0">
-											   <div class="mb-0 fs-14 text-default fw-medium">
-												   <a href="cart.html">Leather Wallet For Grils</a>
-											   </div>
-											   <div>
-												   <a href="javascript:void(0);" class="header-cart-remove float-end dropdown-item-close"><i class="ri-close-circle-line"></i></a>
-											   </div>
-										   </div>
-										   <div class="min-w-fit-content d-flex align-items-start justify-content-between">
-											   <ul class="header-product-item d-flex">
-												   <li>$100</li>
-												   <li class="text-decoration-line-through text-muted">$150</li>
-											   </ul>
-										   </div>
-									   </div>
-								   </div>
-							   </li>
-						   </ul>
-						   <div class="p-2 empty-footer-item border-top">
-							   <div class="d-flex justify-content-between">
-								   <div>
-									   <span class="fs-13 fw-semibold op-9">Total</span>
-								   </div>
-								   <div class="text-end font-medium">
-									   <span class="fs-13 fw-semibold op-9">$40,020</span>
-								   </div>
-							   </div>
-							   </div>
-						   <div class="p-3 empty-header-item border-top">
-							   <div class="d-grid">
-								   <a href="checkout.html" class="btn btn-primary">Proceed to checkout</a>
-							   </div>
-						   </div>
-						   <div class="p-5 empty-item d-none">
-							   <div class="text-center">
-								   <span class="avatar avatar-xxl avatar-rounded bg-primary-transparent">
-									   <i class="ri-shopping-cart-2-line fs-2"></i>
-								   </span>
-								   <h6 class="fw-bold mb-1 mt-3">No Items In Cart</h6>
-								   <span class="mb-3 fw-normal fs-13 d-block">When you have Items added here , they will appear here.</span>
-								   <a href="products.html" class="btn btn-primary btn-wave btn-sm m-1" data-abc="true"><i class="bi bi-arrow-right me-1"></i>continue shopping </a>
-							   </div>
-						   </div>
-					   </div>
-				   <!-- End::main-header-dropdown -->
-			   </div>
-			   <!-- End::header-element -->
 
 			   <!-- Start::header-element -->
 			   <div class="header-element notifications-dropdown">
@@ -523,9 +391,9 @@
 			   <!-- Start::header-element -->
 			   <div class="header-element">
 				   <!-- Start::header-link|switcher-icon -->
-				   <a href="javascript:void(0);" class="header-link switcher-icon" data-bs-toggle="offcanvas" data-bs-target="#switcher-canvas">
+				   {{-- <a href="javascript:void(0);" class="header-link switcher-icon" data-bs-toggle="offcanvas" data-bs-target="#switcher-canvas">
 					   <i class="ri-settings-5-line animate-spin header-link-icon"></i>
-				   </a>
+				   </a> --}}
 				   <!-- End::header-link|switcher-icon -->
 			   </div>
 			   <!-- End::header-element -->

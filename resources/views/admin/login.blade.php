@@ -3,9 +3,10 @@
     <div class="col-xl-6 col-lg-7 d-lg-block d-none px-0">
         <div class="cover p-5">
             <a href="index.html" class="float-end">
-                 <img src="{{asset('admin/img/brand-logos/desktop-white.png')}}" alt="" class="">
+                 {{-- <img src="{{asset('admin/img/brand-logos/desktop-white.png')}}" alt="" class=""> --}}
+                 <img src="{{asset('site/images/logo/logo_01.png')}}" alt="" class="admin-auth-logo">
                 </a>
-            <div class="authentication-page justify-center align-items-center authentication-img w-100 h-100 d-flex ">
+            <div class="authentication-page justify-center align-items-center authentication-img w-100 d-flex ">
                 <img src="{{asset('admin/img/authentication/2.png')}}" alt="logo" class="mx-auto">
             </div>
         </div>
@@ -30,24 +31,47 @@
                             <form action="{{ route('login.post') }}" method="post">
                                 @csrf
                                 <div class="row gy-3">
+                                    <!-- Email Field -->
                                     <div class="col-xl-12">
-                                        <label for="signup-Email" class="form-label text-default op=8">Email address</label>
-                                        <input type="text" class="form-control form-control-lg" name="username" id="signup-Email" placeholder="Email">
+                                        <label for="signup-Email" class="form-label text-default">Email address</label>
+                                        <input type="text" class="form-control form-control-lg @error('username') is-invalid @enderror" 
+                                               name="username" 
+                                               id="signup-Email" 
+                                               value="{{ old('username') }}" 
+                                               placeholder="Email">
+                                        @error('username')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
+                            
+                                    <!-- Password Field -->
                                     <div class="col-xl-12">
-                                        <label  class="form-label text-default d-block">password
+                                        <label class="form-label text-default d-block">
+                                            Password
                                             <a href="reset.html" class="float-end text-success">Forget password ?</a>
                                         </label>
                                         <div class="input-group">
-                                            <input type="password" class="form-control form-control-lg" name="password" id="signup-password" placeholder="password">
-                                            <button class="btn btn-light bg-transparent" type="button" onclick="togglePasswordVisibility(this)" id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button>
+                                            <input type="password" 
+                                                   class="form-control form-control-lg @error('password') is-invalid @enderror" 
+                                                   name="password" 
+                                                   id="signup-password" 
+                                                   placeholder="Password">
+                                            <button class="btn btn-light bg-transparent" type="button" onclick="togglePasswordVisibility(this)" id="button-addon2">
+                                                <i class="ri-eye-off-line align-middle"></i>
+                                            </button>
+                                            @error('password')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
+                            
+                                    <!-- Submit Button -->
                                     <div class="col-xl-12 d-grid mt-2">
                                         <button type="submit" class="btn btn-lg btn-primary">Sign In</button>
                                     </div>
                                 </div>
                             </form>
+                            
                          </div>
                      </div>
                 </div>
