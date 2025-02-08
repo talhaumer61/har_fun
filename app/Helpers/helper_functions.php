@@ -30,7 +30,9 @@ function lastId() {
 // LOGIN TYPES
 function get_logintypes($id = '') {
 	$listlogintypes = array (
-								   '1'	=> 'headoffice'
+								   '1'	=> 'headoffice',
+								   '2'	=> 'customer',
+								   '3'	=> 'seller'
 							);
 	if(!empty($id)){
 		return $listlogintypes[$id];

@@ -1,16 +1,20 @@
 <?php
 
-use App\Http\Controllers\admin\AdminAuthController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\admin\AdminDashboardController;
-
-use App\Http\Controllers\site\SiteDashboardController;
+use App\Http\Controllers\site\CustomerDashboardController;
+use App\Http\Controllers\site\SellerDashboardController;
 use App\Http\Controllers\site\SiteHomeController;
 use App\Http\Controllers\site\SiteJobsController;
 use App\Http\Controllers\site\SiteSellersController;
-use App\Http\Middleware\admin\Authenticate;
+use App\Http\Middleware\admin\AuthenticateAdmin;
+use App\Http\Middleware\site\AuthenticateCustomer;
+use App\Http\Middleware\site\AuthenticateSeller;
 use App\Http\Middleware\admin\RedirectIfAuthenticated;
 use App\Http\Middleware\site\NormalizeRouteCase;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 // Routes that should normalize case
 Route::middleware([NormalizeRouteCase::class])->group(function () {
@@ -29,40 +33,65 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
     Route::get('/faq', [SiteHomeController::class,'faq']);
     Route::get('/account-settings', [SiteHomeController::class,'account_settings']);
     Route::get('/change-password', [SiteHomeController::class,'change_password']);
-    Route::get('/home', [SiteHomeController::class,'home']);
     Route::get('/jobs/{id?}', [SiteJobsController::class,'index']);
     Route::get('/sellers/{id?}', [SiteSellersController::class,'index']);
 
-    // SITE DASHBOARD ROUTES
-    Route::get('/dashboard/{type?}', [SiteDashboardController::class,'index']);
-    Route::get('/seller-profile/{id?}', [SiteDashboardController::class,'seller_profile']);
-    Route::get('/my-resume/{id?}', [SiteDashboardController::class,'my_resume']);
-    Route::get('/seller/messages', [SiteDashboardController::class,'seller_messages']);
-    Route::get('/job-alerts', [SiteDashboardController::class,'job_alerts']);
-    Route::get('/saved-jobs', [SiteDashboardController::class,'saved_jobs']);
 
-    Route::get('/customer-profile/{id?}', [SiteDashboardController::class,'customer_profile']);
-    Route::get('/my-jobs', [SiteDashboardController::class,'my_jobs']);
-    Route::get('/customer/messages', [SiteDashboardController::class,'customer_messages']);
-    Route::get('/post-job', [SiteDashboardController::class,'post_job']);
-    Route::get('/saved-sellers', [SiteDashboardController::class,'saved_sellers']);
-    Route::get('/memberships', [SiteDashboardController::class,'memberships']);
+    Route::middleware([RedirectIfAuthenticated::class])->group(function () {
+        Route::get('/sign-in', [SiteHomeController::class, 'sign_in']);
+        Route::get('/sign-up', [SiteHomeController::class, 'sign_up']);
+        Route::post('/sign-up', [AuthController::class, 'signup'])->name('customer-signup');
+        Route::post('/check-user', function (Request $request) {
+            $column = $request->type === 'email' ? 'email' : 'username';
+            $exists = DB::table(env('USERS'))->where($column, $request->value)->exists();
+        
+            return response()->json(['exists' => $exists]);
+        });
+    });
+
+    // SELLER DASHBOARD ROUTES
+    Route::middleware([AuthenticateSeller::class])->group(function () {
+        Route::get('/seller-dashboard', [SellerDashboardController::class, 'index']);
+        Route::get('/seller-profile/{id?}', [SellerDashboardController::class, 'seller_profile']);
+        Route::get('/my-resume/{id?}', [SellerDashboardController::class, 'my_resume']);
+        Route::get('/seller/messages', [SellerDashboardController::class, 'seller_messages']);
+        Route::get('/job-alerts', [SellerDashboardController::class, 'job_alerts']);
+        Route::get('/saved-jobs', [SellerDashboardController::class, 'saved_jobs']);
+
+        Route::get('/logout', [AuthController::class, 'logout']);
+
+    });
+
+    // CUSTOMER DASHBOARD ROUTES
+    Route::middleware([AuthenticateCustomer::class])->group(function () {
+        Route::get('/dashboard', [CustomerDashboardController::class, 'index']);
+        Route::get('/customer-profile/{id?}', [CustomerDashboardController::class, 'customer_profile']);
+        Route::get('/my-jobs', [CustomerDashboardController::class, 'my_jobs']);
+        Route::get('/customer/messages', [CustomerDashboardController::class, 'customer_messages']);
+        Route::get('/post-job', [CustomerDashboardController::class, 'post_job']);
+        Route::get('/saved-sellers', [CustomerDashboardController::class, 'saved_sellers']);
+        Route::get('/memberships', [CustomerDashboardController::class, 'memberships']);
+
+        Route::get('/logout', [AuthController::class, 'logout']);
+
+    });
 
 
 
     // ADMIN ROUTES
     Route::prefix('portal')->group(function () {
-        // redirection to login when user not logged-in
+        // Prevent logged-in admins from accessing login
         Route::middleware([RedirectIfAuthenticated::class])->group(function () {
             Route::get('/login', function () {
                 return view('admin.login');
             })->name('login');
-            Route::post('/login', [AdminAuthController::class, 'login'])->name('login.post');
+            Route::post('/login', [AuthController::class, 'login'])->name('login.post');
         });
-        Route::middleware([Authenticate::class])->group(function () {
-            Route::get('/', [AdminDashboardController::class,'index']);
-            Route::get('/logout', [AdminAuthController::class, 'logout']);
 
+        // **Admin-Only Routes (Protected by AuthenticateAdmin)**
+        Route::middleware([AuthenticateAdmin::class])->group(function () {
+            Route::get('/', [AdminDashboardController::class, 'index']);
+            Route::get('/logout', [AuthController::class, 'logout']);
         });
     });
     

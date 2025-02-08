@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Middleware\admin;
+namespace App\Http\Middleware\site;
 
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Authenticate
+class AuthenticateCustomer
 {
     /**
      * Handle an incoming request.
@@ -15,8 +15,10 @@ class Authenticate
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$request->session()->has('user')) {
-            return redirect('/portal/login')->withErrors(['message' => 'You need to log in first.']);
+        $user = session('user');
+
+        if (!$user || $user->login_type != 2) {
+            return redirect('/sign-in')->withErrors(['message' => 'You need to log in as a customer.']);
         }
 
         return $next($request);

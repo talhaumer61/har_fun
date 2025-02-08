@@ -30,6 +30,7 @@
                             </div> --}}
                             <form action="{{ route('login.post') }}" method="post">
                                 @csrf
+                                <input type="hidden" name="login_type" value="1">
                                 <div class="row gy-3">
                                     <!-- Email Field -->
                                     <div class="col-xl-12">
