@@ -13,8 +13,20 @@
 				<div class="right-widget ms-auto order-lg-3">
 					<ul class="d-flex align-items-center style-none">
 						<!-- <li class="d-none d-md-block"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li> -->
-						<li><a href="/sign-in" class="login-btn-one" >Login</a></li>
-						<li class="d-none d-md-block ms-4"><a href="/sign-up" class="btn-one">Register</a></li>
+						@if(session()->has('user'))
+
+							@if(session('user')->login_type == 1)
+								<li class="d-none d-md-block"><a href="/portal" class="btn-one w-100">Dashboard</a></li>
+							@elseif(session('user')->login_type == 2)
+								<li class="d-none d-md-block"><a href="/dashboard" class="btn-one w-100">Dashboard</a></li>
+							@elseif(session('user')->login_type == 3)
+								<li class="d-none d-md-block"><a href="/seller-dashboard" class="btn-one w-100">Dashboard</a></li>
+							@endif
+							
+						@else
+							<li><a href="/sign-in" class="login-btn-one" >Login</a></li>
+							<li class="d-none d-md-block ms-4"><a href="/sign-up" class="btn-one">Register</a></li>
+						@endif
 					</ul>
 				</div> <!--/.right-widget-->
 				<nav class="navbar navbar-expand-lg p0 ms-lg-5 ms-3 order-lg-2">
@@ -91,7 +103,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="nav-item dropdown dashboard-menu">
+							{{-- <li class="nav-item dropdown dashboard-menu">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
 									data-bs-auto-close="outside" aria-expanded="false">Dashboard
 								</a>
@@ -99,7 +111,7 @@
 									<li><a href="/seller-dashboard" class="dropdown-item" target="_blank"><span>Seller Dashboard</span></a></li>
 									<li><a href="/dashboard" class="dropdown-item" target="_blank"><span>Customer Dashboard</span></a></li>
 								</ul>
-							</li>
+							</li> --}}
 							<li class="nav-item">
 								<a class="nav-link" href="/home">Home</a>
 							</li>
@@ -119,8 +131,19 @@
 									<li><a href="faq" class="dropdown-item"><span>Faq's</span></a></li>
 								</ul>
 							</li>
-							<li class="d-md-none"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li>
-							<li class="d-md-none"><a href="/sign-up" class="btn-one w-100">Register</a></li>
+							@if(session()->has('user'))
+								@if(session('user')->login_type == 1)
+									<li class="d-md-none"><a href="/portal" class="btn-one w-100">Dashboard</a></li>
+								@elseif(session('user')->login_type == 2)
+									<li class="d-md-none"><a href="/dashboard" class="btn-one w-100">Dashboard</a></li>
+								@elseif(session('user')->login_type == 3)
+									<li class="d-md-none"><a href="/seller-dashboard" class="btn-one w-100">Dashboard</a></li>
+								@endif
+							@else
+								<li class="d-md-none"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li>
+								<li class="d-md-none"><a href="/sign-up" class="btn-one w-100">Register</a></li>
+							@endif
+							
 						</ul>
 					</div>
 				</nav>

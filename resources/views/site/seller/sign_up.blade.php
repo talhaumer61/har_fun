@@ -1,4 +1,4 @@
-@include('site.components.header_links', ['title' => 'Sign Up - HARFUN'])
+@include('site.components.header_links', ['title' => 'Register Seller - HARFUN'])
 
 <section class="registration-section position-relative pt-100 lg-pt-80 pb-150 lg-pb-80">
     <div class="container">
@@ -10,7 +10,7 @@
                 <div class="tab-content mt-40">
                     <div class="tab-pane fade show active" role="tabpanel" id="fc1">
                         
-                        <form id="signupForm" action="{{ route('customer-signup') }}" method="POST">
+                        <form id="signupForm" action="{{ route('seller-signup') }}" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-12">
@@ -72,8 +72,7 @@
                     <span class="pe-3 ps-3">OR</span>
                     <div class="line"></div>
                 </div>
-                <p class="text-center mt-10 mb-0">Have an account? <a href="/sign-in" class="fw-500">Sign In</a></p>
-                <p class="text-center">Become a Seller! <a href="/register-seller" class="fw-500">Register as Seller</a></p>
+                <p class="text-center mt-10">Have an account? <a href="/sign-in" class="fw-500">Sign In</a></p>
                 <div class="text-center">
                     <a href="/home">
                         <small><i class="fas fa-globe-americas"></i> Back to Home</small>

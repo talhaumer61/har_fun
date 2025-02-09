@@ -9,19 +9,28 @@
             <div class="form-wrapper m-auto">
                 <div class="tab-content mt-40">
                     <div class="tab-pane fade show active" role="tabpanel" id="fc1">
-                        <form action="#">
+                        <form action="{{ route('user-login') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-12">
                                     <div class="input-group-meta position-relative mb-25">
-                                        <label>Name*</label>
-                                        <input type="text" placeholder="Rashed Kabir">
+                                        <label>Email / Username*</label>
+                                        <input type="text" placeholder="Enter Email or Username" name="username" value="{{ old('username') }}">
+                                        @error('username')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-group-meta position-relative mb-20">
                                         <label>Password*</label>
-                                        <input type="password" placeholder="Enter Password" class="pass_log_id">
-                                        <span class="placeholder_icon"><span class="passVicon"><img src="{{asset('site/images/icon/icon_60.svg')}}" alt=""></span></span>
+                                        <input type="password" placeholder="Enter Password" name="password" class="pass_log_id">
+                                        <span class="placeholder_icon"><span class="passVicon">
+                                            <img src="{{ asset('site/images/icon/icon_60.svg') }}" alt="">
+                                        </span></span>
+                                        @error('password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -31,13 +40,14 @@
                                             <label for="remember">Keep me logged in</label>
                                         </div>
                                         <a href="#">Forget Password?</a>
-                                    </div> <!-- /.agreement-checkbox -->
+                                    </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn-eleven fw-500 tran3s d-block mt-20">Login</button>
+                                    <button type="submit" class="btn-eleven fw-500 tran3s d-block mt-20">Login</button>
                                 </div>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
                 
@@ -46,7 +56,8 @@
                     <span class="pe-3 ps-3">OR</span>
                     <div class="line"></div>
                 </div>
-                <p class="text-center mt-10">Don't have an account? <a href="/sign-up" class="fw-500">Sign up</a></p>
+                <p class="text-center mb-0 mt-10">Don't have an account? <a href="/sign-up" class="fw-500">Sign up</a></p>
+                <p class="text-center">Become a Seller! <a href="/register-seller" class="fw-500">Register as Seller</a></p>
                 <div class="text-center">
                     <a href="/home">
                         <small><i class="fas fa-globe-americas"></i> Back to Home</small>

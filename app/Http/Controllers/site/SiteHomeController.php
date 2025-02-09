@@ -37,6 +37,9 @@ class SiteHomeController extends Controller
     public function sign_up(){
         return view('site.customer.sign_up');
     }
+    public function seller_sign_up(){
+        return view('site.seller.sign_up');
+    }
     
     public function sign_in(){
         return view('site.sign_in');

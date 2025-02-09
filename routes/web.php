@@ -39,8 +39,15 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
 
     Route::middleware([RedirectIfAuthenticated::class])->group(function () {
         Route::get('/sign-in', [SiteHomeController::class, 'sign_in']);
+        Route::post('/sign-in', [AuthController::class, 'login'])->name('user-login');
+
         Route::get('/sign-up', [SiteHomeController::class, 'sign_up']);
         Route::post('/sign-up', [AuthController::class, 'signup'])->name('customer-signup');
+
+        Route::get('/register-seller', [SiteHomeController::class, 'seller_sign_up']);
+        Route::post('/seller-sign-up', [AuthController::class, 'seller_signup'])->name('seller-signup');
+
+
         Route::post('/check-user', function (Request $request) {
             $column = $request->type === 'email' ? 'email' : 'username';
             $exists = DB::table(env('USERS'))->where($column, $request->value)->exists();
