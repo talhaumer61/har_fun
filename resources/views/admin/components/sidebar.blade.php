@@ -96,7 +96,12 @@
                 </li>
                 <!-- End::slide -->
 
-                <!-- Start::slide -->
+                <li class="slide ">
+                    <a href="{{ route('admin.categories') }}" class="side-menu__item">
+                        <i class="ti ti-border-all side-menu__icon"></i>
+                        <span class="side-menu__label">Categories</span>
+                    </a>
+                </li>
                 <li class="slide ">
                 {{-- <li class="slide has-sub"> --}}
                     <a href="#" class="side-menu__item">

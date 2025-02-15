@@ -8,9 +8,10 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Admin Portal - HARFUN </title>
+    <title> {{$title}} - HARFUN </title>
     <meta name="Description" content="">
 	<meta name="keywords" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
     <link rel="icon" href="{{asset('site/images/fav-icon/icon.png')}}" type="image/x-icon">
@@ -39,12 +40,21 @@
     <!-- Color Picker Css -->
     <link rel="stylesheet" href="{{asset('admin/libs/flatpickr/flatpickr.min.css')}}">
     <link rel="stylesheet" href="{{asset('admin/libs/%40simonwep/pickr/themes/nano.min.css')}}">
+    
+    <link rel="stylesheet" href="{{asset('admin/libs/swiper/swiper-bundle.min.css')}}">
 
     <!-- Choices Css -->
     <link rel="stylesheet" href="{{asset('admin/libs/choices.js/public/assets/styles/choices.min.css')}}">
 
+    <!-- Prism CSS -->
+    <link rel="stylesheet" href="{{asset('admin/libs/prismjs/themes/prism-coy.min.css')}}">
+    
+    <link rel="stylesheet" href="{{asset('admin/libs/filepond/filepond.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/libs/dropzone/dropzone.css')}}">
 
-<link rel="stylesheet" href="{{asset('admin/libs/swiper/swiper-bundle.min.css')}}">
+
 
 </head>
 

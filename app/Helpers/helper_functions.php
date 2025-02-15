@@ -27,6 +27,28 @@ function lastId() {
     return $lastId;
 }
 
+//Status 
+$admstatus = array (
+    array('id'=>1, 'name'=>'Active'), 
+    array('id'=>2, 'name'=>'Inactive')
+);
+
+function get_admstatus($id = '') {
+    $admstatus = array (
+        array('id'=>1, 'name'=>'Active'), 
+        array('id'=>2, 'name'=>'Inactive')
+    );
+    $listadmstatus= array (
+        '1' => '<span class="label label-primary rounded p-1">Active</span>', 
+        '2' => '<span class="label label-warning rounded p-1">Inactive</span>'
+    );
+    if(!empty($id)){
+        return $listadmstatus[$id];
+    }else{
+        return $admstatus;
+    }
+}
+
 // LOGIN TYPES
 function get_logintypes($id = '') {
 	$listlogintypes = array (

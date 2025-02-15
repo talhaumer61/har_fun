@@ -1,4 +1,4 @@
-@include('admin.components.header_links')
+@include('admin.components.header_links',['title' => 'Dashboard Login - HARFUN'])
 <div class="row authentication coming-soon mx-0">
     <div class="col-xl-6 col-lg-7 d-lg-block d-none px-0">
         <div class="cover p-5">
