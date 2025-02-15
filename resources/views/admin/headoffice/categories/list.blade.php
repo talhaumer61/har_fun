@@ -45,14 +45,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @php $sr = 1; @endphp
                                         @foreach ($categories as $category)
                                             <tr>
-                                                <td class="text-center">{{ $category->cat_id }}</td>
+                                                <td class="text-center">{{ $sr }}</td>
                                                 <td>
                                                     <div class="d-flex align-items-center">
                                                         <div class="me-2">
                                                             <span class="avatar avatar-md bg-light p-2">
-                                                                <img src="{{asset($category->cat_icon)}}" alt="">
+                                                                <img src="{{ asset($category->cat_icon) }}" alt="">
                                                             </span>
                                                         </div>
                                                         <div class="fw-semibold">
@@ -64,41 +65,29 @@
                                                     {!! get_admstatus($category->cat_status) !!}
                                                 </td>
                                                 <td>
-                                                    <a href="javascript:void(0);" class="btn btn-icon btn-sm btn-warning-light"><i class="ti ti-eye"></i></a>
                                                     <a href="{{ route('admin.categories', ['action' => 'edit', 'href' => $category->cat_href]) }}" class="btn btn-icon btn-sm btn-info-light">
                                                         <i class="ri-edit-line"></i>
                                                     </a>
                                                     <a href="javascript:void(0);" onclick="confirmDelete('hf_job_categories', {{ $category->cat_id }}, 'cat_id');" class="btn btn-icon btn-sm btn-danger-light product-btn"><i class="ri-delete-bin-line"></i></a>
                                                 </td>
                                             </tr>
+                                            @php $sr++; @endphp
                                         @endforeach
-                                    </tbody>
+                                    </tbody>                                    
                                 </table>
                             </div>
-                            <div class="d-flex align-items-center float-end justify-content-between flex-wrap">
-                                <nav aria-label="Page navigation" class="pagination-style-3 mt-3 float-end">
-                                    <ul class="pagination mb-0 flex-wrap">
-                                        <li class="page-item disabled">
-                                            <a class="page-link" href="javascript:void(0);">
-                                                <i class="las la-angle-double-left"></i>
-                                            </a>
-                                        </li>
-                                        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link text-primary" href="javascript:void(0);">
-                                                <i class="las la-angle-double-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                            
+                            {{-- Bootstrap Pagination --}}
+                            <div class="">
+                                {{ $categories->links('pagination::bootstrap-5') }}
                             </div>
+        
                         @endif
                     </div>
                 </div>
             </div>
         </div>
+        
         
         <!--End::row-1 -->
 

@@ -20,10 +20,12 @@ class AdminDashboardController extends Controller
     public function job_categories(Request $request, $action = 'list', $href = null)
     {
          // Fetch only active and not deleted categories
-         $categories = JobCategory::where('is_deleted', false)
-        ->select('cat_id', 'cat_status', 'cat_name', 'cat_href', 'cat_icon')
+        $categories = JobCategory::where('is_deleted', false)
         ->where('cat_status', 1)
-        ->get();
+        ->select('cat_id', 'cat_status', 'cat_name', 'cat_href', 'cat_icon')
+        ->orderBy('cat_name', 'asc') // Optional: Sorting
+        ->paginate(10); // Display 10 records per page
+
         // dd($categories);
 
        // Fetch specific category if action is 'edit'
