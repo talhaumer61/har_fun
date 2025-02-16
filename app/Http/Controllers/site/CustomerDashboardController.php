@@ -22,10 +22,7 @@ class CustomerDashboardController extends Controller
             return view('site.customer.customer_messages');
         
     }
-    public function post_job(){
-            return view('site.customer.post_job');
-        
-    }
+    
     public function saved_sellers(){
         return view('site.customer.saved_sellers');
     }

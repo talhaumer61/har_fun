@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\site\CustomerDashboardController;
+use App\Http\Controllers\site\JobPostController;
 use App\Http\Controllers\site\SellerDashboardController;
 use App\Http\Controllers\site\SiteHomeController;
 use App\Http\Controllers\site\SiteJobsController;
@@ -76,7 +77,10 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
         Route::get('/customer-profile/{id?}', [CustomerDashboardController::class, 'customer_profile']);
         Route::get('/my-jobs', [CustomerDashboardController::class, 'my_jobs']);
         Route::get('/customer/messages', [CustomerDashboardController::class, 'customer_messages']);
-        Route::get('/post-job', [CustomerDashboardController::class, 'post_job']);
+        Route::get('/post-job', [JobPostController::class, 'index']);
+        Route::post('/post-job', [JobPostController::class, 'postJob'])->name('job.submit');
+
+
         Route::get('/saved-sellers', [CustomerDashboardController::class, 'saved_sellers']);
         Route::get('/memberships', [CustomerDashboardController::class, 'memberships']);
 

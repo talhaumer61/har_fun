@@ -118,6 +118,40 @@
 			});
 		</script>
 		
+		{{-- Upload File In Job Posting --}}
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const fileInput = document.getElementById("uploadFile");
+				const fileList = document.getElementById("fileList");
+
+				// Trigger file input when clicking the button
+				document.querySelector(".dash-btn-one").addEventListener("click", function () {
+					fileInput.click();
+				});
+
+				// Handle file selection
+				fileInput.addEventListener("change", function () {
+					if (fileInput.files.length > 0) {
+						const fileName = fileInput.files[0].name;
+
+						// Display selected file with a remove button
+						fileList.innerHTML = `
+							<div class="attached-file d-flex align-items-center justify-content-between mb-15">
+								<span>${fileName}</span>
+								<a href="#" class="remove-btn"><i class="bi bi-x"></i></a>
+							</div>
+						`;
+
+						// Handle remove file
+						document.querySelector(".remove-btn").addEventListener("click", function (e) {
+							e.preventDefault();
+							fileList.innerHTML = ""; // Remove file from UI
+							fileInput.value = ""; // Clear input value
+						});
+					}
+				});
+			});	
+		</script>
 		
 
 	</div> <!-- /.main-page-wrapper -->
