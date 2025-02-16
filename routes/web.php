@@ -99,9 +99,13 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
         // **Admin-Only Routes (Protected by AuthenticateAdmin)**
         Route::middleware([AuthenticateAdmin::class])->group(function () {
             Route::get('/', [AdminDashboardController::class, 'index']);
+            // Job Categories
             Route::get('/categories/{action?}/{href?}', [AdminDashboardController::class, 'job_categories'])->name('admin.categories');
             Route::post('/categories/add', [AdminDashboardController::class, 'add_job_category'])->name('admin.categories.add');
             Route::post('/categories/edit', [AdminDashboardController::class, 'update_job_category'])->name('admin.categories.update');
+
+            // Users
+            Route::get('/users/{action?}/{href?}', [AdminDashboardController::class, 'users'])->name('admin.users');
 
             Route::post('/delete-record', [DatabaseController::class, 'deleteRecord'])->name('delete.record');
             Route::get('/logout', [AuthController::class, 'logout']);

@@ -213,7 +213,8 @@ class AuthController extends Controller
     {
         $user = session('user');
         $redirectRoute = '/'; // Default logout redirection
-
+        $request->session()->forget('user');
+        $request->session()->flush();
         if ($user) {
             if ($user->login_type == 1) {
                 $redirectRoute = '/portal/login';
@@ -224,8 +225,7 @@ class AuthController extends Controller
             }
         }
 
-        $request->session()->forget('user');
-        $request->session()->flush();
+        
 
         return redirect($redirectRoute)->with('message', 'You have successfully logged out.');
     }

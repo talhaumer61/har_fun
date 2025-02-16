@@ -1,4 +1,4 @@
-@include("admin.components.header",['title' => 'Categories - HARFUN'])
+@include("admin.components.header",['title' => 'Categories'])
 
     @if($action == 'add')
         @include('admin.headoffice.categories.add')

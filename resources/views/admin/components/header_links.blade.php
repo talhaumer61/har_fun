@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="{{asset('admin/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css')}}">
     <link rel="stylesheet" href="{{asset('admin/libs/dropzone/dropzone.css')}}">
 
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
 </head>
 

@@ -50,17 +50,11 @@
                 <!-- End::slide__category -->
 
                 <!-- Start::slide -->
-                <li class="slide has-sub">
-                    <a href="javascript:void(0);" class="side-menu__item">
+                <li class="slide">
+                    <a href="{{ route('admin.users') }}" class="side-menu__item">
                         <i class="ti ti-users side-menu__icon"></i>
                         <span class="side-menu__label">Users</span>
-                        <i class="ri ri-arrow-right-s-line side-menu__angle"></i>
                     </a>
-                    <ul class="slide-menu child1">
-                        {{-- <li class="slide side-menu__label1"><a href="javascript:void(0)">Components</a></li> --}}
-                        <li class="slide"><a href="#" class="side-menu__item">List</a></li>
-                        <li class="slide"><a href="#" class="side-menu__item">Add User</a></li>
-                    </ul>
                 </li>
                 <!-- End::slide -->
 

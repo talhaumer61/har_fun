@@ -111,6 +111,40 @@
 
     </script>
     
+    {{-- Users Record Datatables --}}
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let table = $('#usersTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: "{{ route('admin.users') }}",
+                    data: function(d) {
+                        d.user_type = $('#userTypeFilter').val(); // Send filter value to server
+                    }
+                },
+                columns: [
+                     { data: "DT_RowIndex", name: "DT_RowIndex", orderable: false, searchable: false }, // Sr. Number
+                    { data: 'photo', name: 'photo', orderable: false, searchable: false },
+                    { data: 'name', name: 'name' },
+                    { data: 'username', name: 'username' },
+                    { data: 'email', name: 'email' },
+                    { data: 'phone', name: 'phone' },
+                    { data: 'user_type', name: 'user_type', orderable: false, searchable: false },
+                    { data: "status", name: "status", orderable: false, searchable: false } // Add status column
+                    // { data: 'action', name: 'action', orderable: false, searchable: false }
+                ]
+            });
+
+            // Listen for filter change
+            $('#userTypeFilter').on('change', function() {
+                table.ajax.reload(); // Reload DataTable when filter is changed
+            });
+        });
+
+
+    </script>
 
 </body>
 
