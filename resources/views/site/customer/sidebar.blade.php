@@ -13,7 +13,7 @@
             <!-- /.user-avatar -->
             <div class="user-name-data">
                 <button class="user-name dropdown-toggle" type="button" id="profile-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    Zubayer Hasan
+                    {{ session('user')->name }}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="profile-dropdown">
                     <li>
