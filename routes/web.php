@@ -67,7 +67,7 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
         Route::get('/job-alerts', [SellerDashboardController::class, 'job_alerts']);
         Route::get('/saved-jobs', [SellerDashboardController::class, 'saved_jobs']);
 
-        Route::get('/logout', [AuthController::class, 'logout']);
+        Route::get('/log-out', [AuthController::class, 'logout']);
 
     });
 

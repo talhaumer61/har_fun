@@ -75,7 +75,7 @@
         </div>
         <!-- /.profile-complete-status -->
 
-        <a href="#" class="d-flex w-100 align-items-center logout-btn">
+        <a href="/log-out" class="d-flex w-100 align-items-center logout-btn">
             <img src="{{asset('site/dashboard/icon/icon_9.svg')}}" alt="" class="lazy-img">
             <span>Logout</span>
         </a>
