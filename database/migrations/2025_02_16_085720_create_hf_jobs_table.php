@@ -14,14 +14,15 @@ return new class extends Migration
         Schema::create('hf_jobs', function (Blueprint $table) {
             $table->bigIncrements('job_id'); // Primary Key
             $table->integer('job_status')->default(1); // 1: Active, 2: Inactive
-            $table->unsignedBigInteger('id_customer'); // Foreign Key ref Customers
+            $table->unsignedBigInteger('id_customer');
             $table->string('job_title');
             $table->text('job_desc');
+            $table->unsignedBigInteger('id_city');
             $table->string('job_location');
             $table->unsignedBigInteger('job_budget');
-            $table->unsignedBigInteger('id_currency')->nullable(); // Foreign Key ref Currency
+            $table->unsignedBigInteger('id_currency')->nullable();
             $table->string('job_photo')->nullable();
-            $table->unsignedBigInteger('id_cat'); // Foreign Key ref Category
+            $table->unsignedBigInteger('id_cat');
             $table->bigInteger('id_added')->nullable();
             $table->bigInteger('id_modify')->nullable();
             $table->timestamp('date_added')->nullable();

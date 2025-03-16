@@ -122,7 +122,18 @@
                 <small>Upload file .pdf, .doc, .docx</small>
                 <h4 class="dash-title-three pt-50 lg-pt-30">Address & Location</h4>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-6">
+                        <div class="dash-input-wrapper mb-25">
+                            <label for="">City*</label>
+                            <select class="nice-select" name="id_city">
+                                <option value="">Select a City</option>
+                                @foreach($cities as $city)
+                                    <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                @endforeach                 
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
                         <div class="dash-input-wrapper mb-25">
                             <label for="">Address*</label>
                             <input type="text" name="job_location" placeholder="Cowrasta, Chandana, Gazipur Sadar">
@@ -205,7 +216,7 @@
 
             <div class="button-group d-inline-flex align-items-center mt-30">
                 <button type="submit" href="#" class="dash-btn-two tran3s me-3">Submit Job</button>
-                <a href="/post-job" class="dash-cancel-btn tran3s">Cancel</a>
+                <a href="/dashboard" class="dash-cancel-btn tran3s">Cancel</a>
             </div>
         </form>				
     </div>
