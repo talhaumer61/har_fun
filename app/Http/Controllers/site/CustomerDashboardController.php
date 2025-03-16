@@ -21,13 +21,13 @@ class CustomerDashboardController extends Controller
     {
         $userId = session('user')->id; // Get the logged-in user ID from session
         // $jobs = DB::table('hf_jobs')->where('id_customer', $userId)->paginate(10); // Paginate results
-        $jobs = DB::table('hf_jobs')
+        $my_jobs = DB::table('hf_jobs')
         ->join('hf_job_categories', 'hf_jobs.id_cat', '=', 'hf_job_categories.cat_id') // Join with categories table
         ->where('hf_jobs.id_customer', $userId) // Filter by logged-in user
         ->select('hf_jobs.*', 'hf_job_categories.cat_name') // Select all job fields + category name
-        ->paginate(10);
+        ->get();
 
-        return view('site.customer.my_jobs', compact('jobs')); // Pass jobs to view
+        return view('site.customer.my_jobs', compact('my_jobs')); // Pass jobs to view
     }
 
 

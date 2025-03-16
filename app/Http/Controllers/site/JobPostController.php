@@ -7,7 +7,7 @@ use App\Models\Job;
 use App\Models\JobCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Str;
 
 class JobPostController extends Controller
 {
@@ -51,6 +51,7 @@ class JobPostController extends Controller
         $job = new Job();
         $job->id_customer = $user->id;
         $job->job_title = $request->job_title;
+        $job->job_href = Str::random(16);
         $job->id_city = $request->id_city;
         $job->id_cat = $request->id_cat;
         $job->job_budget = $request->job_budget;

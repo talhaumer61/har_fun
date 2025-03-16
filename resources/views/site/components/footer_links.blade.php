@@ -153,6 +153,23 @@
 			});	
 		</script>
 		
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Get the current URL path
+				let currentPath = window.location.pathname;
+		
+				// Select all sidebar links
+				let sidebarLinks = document.querySelectorAll(".dasboard-main-nav a");
+		
+				// Loop through links and add 'active' class if it matches the current path
+				sidebarLinks.forEach(link => {
+					if (link.getAttribute("href") === currentPath) {
+						link.classList.add("active");
+					}
+				});
+			});
+		</script>
+		
 
 	</div> <!-- /.main-page-wrapper -->
 </body>

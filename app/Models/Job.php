@@ -16,6 +16,7 @@ class Job extends Model
         'job_status',
         'id_customer',
         'job_title',
+        'job_href',
         'job_desc',
         'job_location',
         'job_budget',

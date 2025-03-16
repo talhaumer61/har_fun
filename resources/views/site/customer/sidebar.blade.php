@@ -31,8 +31,8 @@
         <!-- /.user-data -->
         <nav class="dasboard-main-nav">
             <ul class="style-none">
-                <li><a href="/dashboard/customer" class="d-flex w-100 align-items-center active">
-                    <img src="{{asset('site/dashboard/icon/icon_1_active.svg')}}" alt="" class="lazy-img">
+                <li><a href="/dashboard" class="d-flex w-100 align-items-center">
+                    <img src="{{asset('site/dashboard/icon/icon_1.svg')}}" alt="" class="lazy-img">
                     <span>Dashboard</span>
                 </a></li>
                 <li><a href="/customer-profile" class="d-flex w-100 align-items-center">

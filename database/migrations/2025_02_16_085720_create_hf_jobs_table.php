@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('job_status')->default(1); // 1: Active, 2: Inactive
             $table->unsignedBigInteger('id_customer');
             $table->string('job_title');
+            $table->string('job_href');
             $table->text('job_desc');
             $table->unsignedBigInteger('id_city');
             $table->string('job_location');

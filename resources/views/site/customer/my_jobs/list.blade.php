@@ -20,45 +20,50 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="a1" role="tabpanel">
                     <div class="table-responsive">
-                        <table class="table job-alert-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Job Created</th>
-                                    <th scope="col">Applicants</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="border-0"> 
-                                @foreach ($jobs as $job)
-                                <tr class="{{ $job->job_status==1?"pending":"active" }}">
-                                    <td>
-                                        <div class="job-name fw-500">{{ $job->job_title }}</div>
-                                        <div class="info1">{{ $job->cat_name }}</div>
-                                    </td>
-                                    <td>{{ \Carbon\Carbon::parse($job->date_added)->format('d M, Y') }}</td>
-                                    <td>{{ $job->applicants_count ?? '0' }} Applications</td>
-                                    <td><div class="job-status">{!! get_admstatus($job->job_status) !!}</div></td>
-                                    <td>
-                                        <div class="action-dots float-end">
-                                            <button class="action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span></span>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_18.svg') }}" alt="" class="lazy-img"> View</a></li>
-                                                <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_19.svg') }}" alt="" class="lazy-img"> Share</a></li>
-                                                <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_20.svg') }}" alt="" class="lazy-img"> Edit</a></li>
-                                                <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_21.svg') }}" alt="" class="lazy-img"> Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        @if ($my_jobs->isNotEmpty())
+                            <table class="table job-alert-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Job Created</th>
+                                        <th scope="col">Applicants</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-0"> 
+                                    @foreach ($my_jobs as $job)
+                                    <tr class="{{ $job->job_status==1?"pending":"active" }}">
+                                        <td>
+                                            <div class="job-name fw-500">{{ $job->job_title }}</div>
+                                            <div class="info1">{{ $job->cat_name }}</div>
+                                        </td>
+                                        <td>{{ \Carbon\Carbon::parse($job->date_added)->format('d M, Y') }}</td>
+                                        <td>{{ $job->applicants_count ?? '0' }} Applications</td>
+                                        <td><div class="job-status">{!! get_admstatus($job->job_status) !!}</div></td>
+                                        <td>
+                                            <div class="action-dots float-end">
+                                                <button class="action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                    <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_18.svg') }}" alt="" class="lazy-img"> View</a></li>
+                                                    <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_19.svg') }}" alt="" class="lazy-img"> Share</a></li>
+                                                    <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_20.svg') }}" alt="" class="lazy-img"> Edit</a></li>
+                                                    <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_21.svg') }}" alt="" class="lazy-img"> Delete</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <h3 class="text-center text-danger">No Record Found!</h3>
+                        @endif
+                        
                         <div class="mt-3">
-                            {{ $jobs->links('pagination::bootstrap-5') }}
+                            {{-- {{ $my_jobs->links('pagination::bootstrap-5') }} --}}
                         </div>
                         <!-- /.table job-alert-table -->
                     </div>
