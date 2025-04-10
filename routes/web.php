@@ -35,7 +35,9 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
     Route::get('/faq', [SiteHomeController::class,'faq']);
     Route::get('/account-settings', [SiteHomeController::class,'account_settings']);
     Route::get('/change-password', [SiteHomeController::class,'change_password']);
-    Route::get('/jobs/{id?}', [SiteJobsController::class,'index']);
+    Route::get('/jobs/{category?}', [SiteJobsController::class,'index']);
+    // Job detail
+    Route::get('/job/{href}', [SiteJobsController::class, 'show']);
     Route::get('/sellers/{id?}', [SiteSellersController::class,'index']);
 
 

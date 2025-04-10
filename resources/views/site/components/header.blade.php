@@ -42,59 +42,24 @@
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><i class="bi bi-grid-fill"></i> Category</a>
 								<ul class="dropdown-menu category-dropdown">
 									<li class="row gx-0">
-										<div class="col-lg-6">
-											<a href="/jobs" class="item d-flex align-items-center">
-												<div class="icon d-flex align-items-center justify-content-center rounded-circle tran3s"><img src="{{asset('site/images/icon/icon_63.svg')}}" alt="" class="lazy-img"></div>
-												<div class="ps-3 flex-fill">
-													<div class="fw-500 text-dark">UI/UX Design</div>
-													<div class="job-count">12k+ Jobs</div>
-												</div>
-											</a>
-											<!-- /.item -->
-											<a href="/jobs" class="item d-flex align-items-center">
-												<div class="icon d-flex align-items-center justify-content-center rounded-circle tran3s"><img src="{{asset('site/images/icon/icon_64.svg')}}" alt="" class="lazy-img"></div>
-												<div class="ps-3 flex-fill">
-													<div class="fw-500 text-dark">Development</div>
-													<div class="job-count">7k+ Jobs</div>
-												</div>
-											</a>
-											<!-- /.item -->
-											<a href="/jobs" class="item d-flex align-items-center">
-												<div class="icon d-flex align-items-center justify-content-center rounded-circle tran3s"><img src="{{asset('site/images/icon/icon_65.svg')}}" alt="" class="lazy-img"></div>
-												<div class="ps-3 flex-fill">
-													<div class="fw-500 text-dark">Telemarketing</div>
-													<div class="job-count">310+ Jobs</div>
-												</div>
-											</a>
-											<!-- /.item -->
-										</div>
-										<div class="col-lg-6">
-											<a href="/jobs" class="item d-flex align-items-center">
-												<div class="icon d-flex align-items-center justify-content-center rounded-circle tran3s"><img src="{{asset('site/images/icon/icon_68.svg')}}" alt="" class="lazy-img"></div>
-												<div class="ps-3 flex-fill">
-													<div class="fw-500 text-dark">Marketing</div>
-													<div class="job-count">420+ Jobs</div>
-												</div>
-											</a>
-											<!-- /.item -->
-											<a href="/jobs" class="item d-flex align-items-center">
-												<div class="icon d-flex align-items-center justify-content-center rounded-circle tran3s"><img src="{{asset('site/images/icon/icon_66.svg')}}" alt="" class="lazy-img"></div>
-												<div class="ps-3 flex-fill">
-													<div class="fw-500 text-dark">Editing</div>
-													<div class="job-count">3k+ Jobs</div>
-												</div>
-											</a>
-											<!-- /.item -->
-											<a href="/jobs" class="item d-flex align-items-center">
-												<div class="icon d-flex align-items-center justify-content-center rounded-circle tran3s"><img src="{{asset('site/images/icon/icon_67.svg')}}" alt="" class="lazy-img"></div>
-												<div class="ps-3 flex-fill">
-													<div class="fw-500 text-dark">Finance Accounting</div>
-													<div class="job-count">150+ Jobs</div>
-												</div>
-											</a>
-											<!-- /.item -->
-										</div>
+										@foreach(getCategories() as $category)
+											<div class="col-lg-6">
+												<a href="/jobs/{{ $category->cat_href }}" class="item d-flex align-items-center">
+													<div class="icon d-flex align-items-center justify-content-center rounded-circle tran3s">
+														<img src="{{ asset(''. $category->cat_icon.'') }}" alt="" class="lazy-img">
+													</div>
+													<div class="ps-3 flex-fill">
+														<div class="fw-500 text-dark">{{ $category->cat_name }}</div>
+														<div class="job-count">
+															<!-- Assuming you want to display job count; you can adjust according to your needs -->
+															{{-- {{ $category->job_count }} Jobs --}}
+														</div>
+													</div>
+												</a>
+											</div>
+										@endforeach
 									</li>
+									
 									<li>
 										<a href="/jobs" class="explore-all-btn d-flex align-items-center justify-content-between tran3s">
 											<span class="fw-500">Explore all fields</span>

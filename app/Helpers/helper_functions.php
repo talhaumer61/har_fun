@@ -140,3 +140,16 @@ function sendRemark($remarks = "", $action = "", $id_record = "") {
     // Return false if required parameters are missing
     return false;
 }
+
+
+function getCategories() {
+    // Fetch categories from the database
+    $categories = DB::table('hf_job_categories')
+                    ->where('cat_status', 1)  // Assuming cat_status = 1 means active
+                    ->where('is_deleted', 0)  // Assuming is_deleted = 0 means not deleted
+                    ->limit(6)
+                    ->get();
+
+    // Return the categories
+    return $categories;
+}

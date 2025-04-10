@@ -14,157 +14,48 @@
 				</div>
 
                 <div class="job-listing-wrapper border-wrapper mt-80 lg-mt-40 wow fadeInUp">
-                    <div class="job-list-one position-relative bottom-border">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-xxl-3 col-lg-4">
-                                <div class="job-title d-flex align-items-center">
-                                    <a href="/jobs/test-job" class="logo"><img src="{{asset('site/images/logo/media_22.png')}}" alt="" class="lazy-img m-auto"></a>
-                                    <a href="/jobs/test-job" class="title fw-500 tran3s">Developer & expert in java c++</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
-                                <a href="/jobs/test-job" class="job-duration fw-500">Fulltime</a>
-                                <div class="job-date">18 Jul 2018 by <a href="/jobs/test-job">slack</a></div>
-                            </div>
-							<div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 ms-auto xs-mt-10">
-								<div class="job-location">
-									<a href="/jobs/test-job">Spain, Bercelona</a>
+					@foreach ($latest_jobs as $job)
+						<div class="job-list-one position-relative bottom-border">
+							<div class="row justify-content-between align-items-center">
+								<div class="col-xxl-3 col-lg-4">
+									<div class="job-title d-flex align-items-center">
+										<!-- Display Category Icon -->
+										<img src="{{ asset(''. $job->cat_icon.'') }}" alt="{{ $job->cat_icon }}" class="lazy-img m-auto" style="width: 50px; height: 50px;">
+										<!-- Display Job Title -->
+										<a href="/jobs/{{ $job->job_href }}" class="title fw-500 tran3s">{{ $job->job_title }}</a>
+									</div>
 								</div>
-								<div class="job-category">
-									<a href="/jobs/test-job">Developer,</a>
-									<a href="/jobs/test-job">Coder</a>
+								<div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
+									<!-- Display Job Type (Full-time/Part-time) -->
+									{{-- <a href="/jobs/{{ $job->job_href }}" class="job-duration fw-500">{{ $job->job_type }}</a> --}}
+									<!-- Display Job Posted Date -->
+									<div class="job-date">{{ \Carbon\Carbon::parse($job->date_added)->format('d M Y') }} by <a href="/jobs/{{ $job->job_href }}">{{ $job->name }}</a></div>
 								</div>
-							</div>
-							<div class="col-lg-2 col-md-4">
-								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="/jobs/test-job" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="/jobs/test-job" class="apply-btn text-center tran3s">APPLY</a>
+								<div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 ms-auto xs-mt-10">
+									<!-- Display Job Location -->
+									<div class="job-location">
+										<a href="/jobs/{{ $job->job_href }}">{{ $job->job_location }}</a>
+									</div>
+									<!-- Display Job Categories -->
+									<div class="job-category">
+											<a href="/jobs/{{ $job->cat_href }}">{{ $job->cat_name }}</a>
+									</div>
 								</div>
-							</div>
-                        </div>
-                    </div>
-                    <!-- /.job-list-one -->
-					<div class="job-list-one position-relative bottom-border">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-xxl-3 col-lg-4">
-                                <div class="job-title d-flex align-items-center">
-                                    <a href="/jobs/test-job" class="logo"><img src="{{asset('site/images/logo/media_23.png')}}" alt="" class="lazy-img m-auto"></a>
-                                    <a href="/jobs/test-job" class="title fw-500 tran3s">Animator & Expert in maya 3D </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
-                                <a href="/jobs/test-job" class="job-duration fw-500 part-time">Part time</a>
-                                <div class="job-date">18 Jul 2018 by <a href="/jobs/test-job">google</a></div>
-                            </div>
-							<div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 ms-auto xs-mt-10">
-								<div class="job-location">
-									<a href="/jobs/test-job">USA,New York</a>
-								</div>
-								<div class="job-category">
-									<a href="/jobs/test-job">Finance,</a>
-									<a href="/jobs/test-job">Accounting</a>
+								<div class="col-lg-2 col-md-4">
+									<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
+										<!-- Save Job Button -->
+										<a href="/jobs/{{ $job->job_href }}" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job">
+											<i class="bi bi-bookmark-dash"></i>
+										</a>
+										<!-- Apply Button -->
+										<a href="/jobs/{{ $job->job_href }}" class="apply-btn text-center tran3s">APPLY</a>
+									</div>
 								</div>
 							</div>
-							<div class="col-lg-2 col-md-4">
-								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="/jobs/test-job" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="/jobs/test-job" class="apply-btn text-center tran3s">APPLY</a>
-								</div>
-							</div>
-                        </div>
-                    </div>
-                    <!-- /.job-list-one -->
-					<div class="job-list-one position-relative bottom-border">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-xxl-3 col-lg-4">
-                                <div class="job-title d-flex align-items-center">
-                                    <a href="/jobs/test-job" class="logo"><img src="{{asset('site/images/logo/media_24.png')}}" alt="" class="lazy-img m-auto"></a>
-                                    <a href="/jobs/test-job" class="title fw-500 tran3s">Marketing Specialist in SEO & SMM</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
-                                <a href="/jobs/test-job" class="job-duration fw-500 part-time">Part time</a>
-                                <div class="job-date">18 Jul 2018 by <a href="/jobs/test-job">pinterest</a></div>
-                            </div>
-							<div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 ms-auto xs-mt-10">
-								<div class="job-location">
-									<a href="/jobs/test-job">USA,Alaska</a>
-								</div>
-								<div class="job-category">
-									<a href="/jobs/test-job">Design,</a>
-									<a href="/jobs/test-job">Artist</a>
-								</div>
-							</div>
-							<div class="col-lg-2 col-md-4">
-								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="/jobs/test-job" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="/jobs/test-job" class="apply-btn text-center tran3s">APPLY</a>
-								</div>
-							</div>
-                        </div>
-                    </div>
-                    <!-- /.job-list-one -->
-					<div class="job-list-one position-relative bottom-border">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-xxl-3 col-lg-4">
-                                <div class="job-title d-flex align-items-center">
-                                    <a href="/jobs/test-job" class="logo"><img src="{{asset('site/images/logo/media_25.png')}}" alt="" class="lazy-img m-auto"></a>
-                                    <a href="/jobs/test-job" class="title fw-500 tran3s">Developer & Expert in java c++.</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
-                                <a href="/jobs/test-job" class="job-duration fw-500">Fulltime</a>
-                                <div class="job-date">18 Jul 2018 by <a href="/jobs/test-job">instagram</a></div>
-                            </div>
-							<div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 ms-auto xs-mt-10">
-								<div class="job-location">
-									<a href="/jobs/test-job">USA,California</a>
-								</div>
-								<div class="job-category">
-									<a href="/jobs/test-job">Application,</a>
-									<a href="/jobs/test-job">Dev</a>
-								</div>
-							</div>
-							<div class="col-lg-2 col-md-4">
-								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="/jobs/test-job" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="/jobs/test-job" class="apply-btn text-center tran3s">APPLY</a>
-								</div>
-							</div>
-                        </div>
-                    </div>
-                    <!-- /.job-list-one -->
-					<div class="job-list-one position-relative">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-xxl-3 col-lg-4">
-                                <div class="job-title d-flex align-items-center">
-                                    <a href="/jobs/test-job" class="logo"><img src="{{asset('site/images/logo/media_26.png')}}" alt="" class="lazy-img m-auto"></a>
-                                    <a href="/jobs/test-job" class="title fw-500 tran3s">Lead & Product Desginer.</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 ms-auto">
-                                <a href="/jobs/test-job" class="job-duration fw-500">Fulltime</a>
-                                <div class="job-date">18 Jul 2018 by <a href="/jobs/test-job">linkedin</a></div>
-                            </div>
-							<div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 ms-auto xs-mt-10">
-								<div class="job-location">
-									<a href="/jobs/test-job">UK,London</a>
-								</div>
-								<div class="job-category">
-									<a href="/jobs/test-job">Finance,</a>
-									<a href="/jobs/test-job">Business</a>
-								</div>
-							</div>
-							<div class="col-lg-2 col-md-4">
-								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="/jobs/test-job" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="/jobs/test-job" class="apply-btn text-center tran3s">APPLY</a>
-								</div>
-							</div>
-                        </div>
-                    </div>
-                    <!-- /.job-list-one -->
-                </div>
+						</div>
+					@endforeach
+				</div>
+				
                 <!-- /.job-listing-wrapper -->
 
 				<div class="text-center mt-40 d-lg-none">

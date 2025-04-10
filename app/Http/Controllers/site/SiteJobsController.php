@@ -4,22 +4,67 @@ namespace App\Http\Controllers\site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SiteJobsController extends Controller
 {
-    public function index($id = null){
-        if ($id) {
-            // Fetch single job details
-            $job = [
-                'title' => 'Job ' . $id, 
-            ];
-            return view('site.jobs',compact('job'));
+    public function index($category = null)
+    {
+        if ($category) {
+            // Find the category by href
+            $category = DB::table('hf_job_categories')
+                ->where('cat_href', $category)
+                ->where('is_deleted', false)
+                ->where('cat_status', 1)
+                ->first();
 
+            if ($category) {
+                // Fetch jobs of that category, with cat_icon
+                $jobs = DB::table('hf_jobs')
+                    ->join('hf_job_categories', 'hf_jobs.id_cat', '=', 'hf_job_categories.cat_id')
+                    ->where('hf_jobs.id_cat', $category->cat_id)
+                    ->where('hf_jobs.job_status', 1)
+                    ->where('hf_jobs.is_deleted', false)
+                    ->select('hf_jobs.*', 'hf_job_categories.cat_icon')
+                    ->get();
+
+                return view('site.jobs', [
+                    'category' => $category,
+                    'jobs' => $jobs
+                ]);
+            } else {
+                // Invalid category href
+                return redirect('/jobs');
+            }
         } else {
-            // Fetch job list
-            return view('site.jobs');
-            
+            // All active jobs with cat_icon
+            $jobs = DB::table('hf_jobs')
+                ->join('hf_job_categories', 'hf_jobs.id_cat', '=', 'hf_job_categories.cat_id')
+                ->where('hf_jobs.job_status', 1)
+                ->where('hf_jobs.is_deleted', false)
+                ->select('hf_jobs.*', 'hf_job_categories.cat_icon')
+                ->get();
+
+            return view('site.jobs', ['jobs' => $jobs]);
         }
-        
     }
+
+
+    // Show single job detail
+    public function show($href)
+    {
+        $job = DB::table('hf_jobs')
+            ->where('job_href', $href)
+            ->where('job_status', 1)
+            ->where('is_deleted', false)
+            ->first();
+
+        if (!$job) {
+            abort(404); // Or redirect back to jobs list
+        }
+
+        return view('site.jobs', ['job' => $job]);
+    }
+
 }
+
