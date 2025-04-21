@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="col-xl-12">
                                     <label for="product-Features-add" class="form-label">Detail</label>
-                                    <textarea class="form-control" name="cat_detail" id="ckeditor" rows="2"></textarea>
+                                    <textarea class="form-control" name="cat_detail" id="ckeditor1" rows="2"></textarea>
                                 </div>
                                 <div class="col-xl-12 product-documents-container">
                                     <p class="fw-semibold mb-2 fs-14">Icon :</p>

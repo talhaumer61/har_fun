@@ -54,22 +54,18 @@
     <!-- index-4 JS -->
     <script src="{{asset('admin/js/index-4.js')}}"></script>
 
-
-    <!-- Custom-Switcher JS -->
-    <script src="{{asset('admin/js/custom-switcher.min.js')}}"></script>  
-
-    
-
-    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
-    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     
     <!-- Custom JS -->
     <script src="{{asset('admin/js/custom.js')}}"></script>
     <script src="{{asset('admin/js/show-password.js')}}"></script>
 
+    {{-- CkEditor --}}
     <script>
-        CKEDITOR.replace('ckeditor'); 
+        document.querySelectorAll('[id^="ckeditor"]').forEach(function(element){
+            CKEDITOR.replace(element); 
+        });
     </script>
+
     <!-- SweetAlert2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -79,12 +75,17 @@
             Swal.fire({
                 title: "Are you sure?",
                 text: "You are about to delete this record.",
-                icon: "warning",
+                icon: "warning", // fallback
+                iconHtml: '<i class="ri-delete-bin-line" style="color:#d33; font-size: 2.5rem;"></i>',
                 showCancelButton: true,
                 confirmButtonColor: "#d33",
                 cancelButtonColor: "#3085d6",
                 confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "Cancel"
+                cancelButtonText: "Cancel",
+                background: "rgba(255, 228, 225)", // light red with opacity
+                customClass: {
+                    popup: 'blurred-modal'
+                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
@@ -108,7 +109,6 @@
                 }
             });
         }
-
     </script>
     
     {{-- Users Record Datatables --}}

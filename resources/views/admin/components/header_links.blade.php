@@ -56,6 +56,13 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+
+    <style>
+        .cke_notification{
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body>
