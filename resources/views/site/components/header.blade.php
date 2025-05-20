@@ -14,12 +14,14 @@
 					<ul class="d-flex align-items-center style-none">
 						<!-- <li class="d-none d-md-block"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li> -->
 						@if(session()->has('user'))
-
 							@if(session('user')->login_type == 1)
+								<li class="d-none d-md-block me-1"><a href="/logout" class="btn-one w-100">Logout</a></li>
 								<li class="d-none d-md-block"><a href="/portal" class="btn-one w-100">Dashboard</a></li>
 							@elseif(session('user')->login_type == 2)
+								<li class="d-none d-md-block me-1"><a href="/logout" class="btn-one w-100">Logout</a></li>
 								<li class="d-none d-md-block"><a href="/dashboard" class="btn-one w-100">Dashboard</a></li>
 							@elseif(session('user')->login_type == 3)
+								<li class="d-none d-md-block me-1"><a href="/log-out" class="btn-one w-100">Logout</a></li>
 								<li class="d-none d-md-block"><a href="/seller-dashboard" class="btn-one w-100">Dashboard</a></li>
 							@endif
 							
@@ -98,14 +100,17 @@
 							</li>
 							@if(session()->has('user'))
 								@if(session('user')->login_type == 1)
+									<li class="d-md-none"><a href="/logout" class="btn-one w-100">Logout</a></li>
 									<li class="d-md-none"><a href="/portal" class="btn-one w-100">Dashboard</a></li>
 								@elseif(session('user')->login_type == 2)
+									<li class="d-md-none"><a href="/logout" class="btn-one w-100">Logout</a></li>
 									<li class="d-md-none"><a href="/dashboard" class="btn-one w-100">Dashboard</a></li>
 								@elseif(session('user')->login_type == 3)
+									<li class="d-md-none"><a href="/log-out" class="btn-one w-100">Logout</a></li>
 									<li class="d-md-none"><a href="/seller-dashboard" class="btn-one w-100">Dashboard</a></li>
 								@endif
 							@else
-								<li class="d-md-none"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li>
+								<li class="d-md-none me-1"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li>
 								<li class="d-md-none"><a href="/sign-up" class="btn-one w-100">Register</a></li>
 							@endif
 							

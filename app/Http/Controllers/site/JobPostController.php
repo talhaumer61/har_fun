@@ -29,6 +29,7 @@ class JobPostController extends Controller
             'id_cat' => 'nullable|integer',
             'id_city' => 'nullable|integer',
             'job_budget' => 'required|string',
+            'job_overview' => 'required|string',
             'job_desc' => 'required|string',
             'job_photo' => 'nullable|file|mimes:pdf,doc,docx,jpg,jpeg,png|max:2048',
             'job_location' => 'required|string'
@@ -55,6 +56,7 @@ class JobPostController extends Controller
         $job->id_city = $request->id_city;
         $job->id_cat = $request->id_cat;
         $job->job_budget = $request->job_budget;
+        $job->job_overview = $request->job_overview;
         $job->job_desc = $request->job_desc;
         $job->job_photo = $filePath;
         $job->job_location = $request->job_location;

@@ -31,6 +31,10 @@
         <!-- /.user-data -->
         <nav class="dasboard-main-nav">
             <ul class="style-none">
+                <li><a href="/" class="d-flex w-100 align-items-center pt-0">
+                    <img src="{{asset('site/dashboard/icon/icon_32.svg')}}" alt="" class="lazy-img">
+                    <span>Back to Home</span>
+                </a></li>
                 <li><a href="/dashboard/seller" class="d-flex w-100 align-items-center active">
                     <img src="{{asset('site/dashboard/icon/icon_1_active.svg')}}" alt="" class="lazy-img">
                     <span>Dashboard</span>

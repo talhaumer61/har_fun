@@ -27,8 +27,12 @@
                     </div>
                 </div>
                 <div class="dash-input-wrapper mb-30">
+                    <label for="">Overview*</label>
+                    <textarea class="size-md" name="job_overview" placeholder="A short overview of job..."></textarea>
+                </div>
+                <div class="dash-input-wrapper mb-30">
                     <label for="">Job Description*</label>
-                    <textarea class="size-lg" name="job_desc" placeholder="Write about the job in details..."></textarea>
+                    <textarea class="size-lg" name="job_desc" placeholder="Describe job in details..."></textarea>
                 </div>
                 
 

@@ -12,7 +12,11 @@ class CustomerDashboardController extends Controller
 {
    // Customer
     public function index(){
-        return view('site.customer.dashboard');    
+        $jobCount = DB::table('hf_jobs')
+                        ->where('id_customer', session('user')->id)
+                        ->where('is_deleted', false)
+                        ->count();
+        return view('site.customer.dashboard', compact('jobCount'));    
     }
     public function customer_profile($id = null){
     return view('site.customer.customer_profile');

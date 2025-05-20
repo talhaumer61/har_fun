@@ -5,6 +5,7 @@ use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\site\CustomerDashboardController;
 use App\Http\Controllers\site\JobPostController;
+use App\Http\Controllers\site\ProposalController;
 use App\Http\Controllers\site\SellerDashboardController;
 use App\Http\Controllers\site\SiteHomeController;
 use App\Http\Controllers\site\SiteJobsController;
@@ -38,9 +39,10 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
     Route::get('/jobs/{category?}', [SiteJobsController::class,'index']);
     // Job detail
     Route::get('/job/{href}', [SiteJobsController::class, 'show']);
+
     Route::get('/sellers/{id?}', [SiteSellersController::class,'index']);
 
-
+    // ROUTES FOR NON_LOGGED USERS
     Route::middleware([RedirectIfAuthenticated::class])->group(function () {
         Route::get('/sign-in', [SiteHomeController::class, 'sign_in']);
         Route::post('/sign-in', [AuthController::class, 'login'])->name('user-login');
@@ -68,6 +70,8 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
         Route::get('/seller/messages', [SellerDashboardController::class, 'seller_messages']);
         Route::get('/job-alerts', [SellerDashboardController::class, 'job_alerts']);
         Route::get('/saved-jobs', [SellerDashboardController::class, 'saved_jobs']);
+
+        Route::post('/submit-proposal', [ProposalController::class, 'store'])->name('submit.proposal');
 
         Route::get('/log-out', [AuthController::class, 'logout']);
 
