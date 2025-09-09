@@ -39,15 +39,15 @@
                                             <div class="info1">{{ $job->cat_name }}</div>
                                         </td>
                                         <td>{{ \Carbon\Carbon::parse($job->date_added)->format('d M, Y') }}</td>
-                                        <td>{{ $job->applicants_count ?? '0' }} Applications</td>
-                                        <td><div class="job-status">{!! get_admstatus($job->job_status) !!}</div></td>
+                                        <td>{{ $job->pending_proposals ?? '0' }} Applications</td>
+                                        <td><div class="job-status">{!! get_jobstatus($job->job_status) !!}</div></td>
                                         <td>
                                             <div class="action-dots float-end">
                                                 <button class="action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <span></span>
                                                 </button>
                                                 <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_18.svg') }}" alt="" class="lazy-img"> View</a></li>
+                                                    <li><a class="dropdown-item" href="/my-jobs/proposals/{{$job->job_href}}"><img src="{{ asset('site/dashboard/icon/icon_18.svg') }}" alt="" class="lazy-img"> View Proposals</a></li>
                                                     <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_19.svg') }}" alt="" class="lazy-img"> Share</a></li>
                                                     <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_20.svg') }}" alt="" class="lazy-img"> Edit</a></li>
                                                     <li><a class="dropdown-item" href="#"><img src="{{ asset('site/dashboard/icon/icon_21.svg') }}" alt="" class="lazy-img"> Delete</a></li>

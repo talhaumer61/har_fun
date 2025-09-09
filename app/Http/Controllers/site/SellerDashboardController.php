@@ -18,10 +18,7 @@ class SellerDashboardController extends Controller
             return view('site.seller.my_resume');
         
     }
-    public function seller_messages(){
-            return view('site.seller.seller_messages');
-        
-    }
+    
     public function job_alerts(){
             return view('site.seller.job_alerts');
         

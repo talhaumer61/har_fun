@@ -11,6 +11,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Jobi - Responsive Job Board HTML Template">
 	<meta name='og:image' content="{{asset('site/images/assets/ogg.png')}}">
+
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- For IE -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- For Resposive Device -->
@@ -34,6 +36,50 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
 
+	<style>
+/* Chat box styling */
+#chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Sender messages (right) */
+.message.sender {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    align-self: flex-end;
+    max-width: 60%;
+    margin: 5px;
+}
+
+/* Receiver messages (left) */
+.message.receiver {
+    background-color: #e5e5e5;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 15px;
+    align-self: flex-start;
+    max-width: 60%;
+    margin: 5px;
+}
+
+/* Message container */
+.message-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input box */
+#messageInput {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+</style>
 	<!-- Fix Internet Explorer ______________________________________-->
 	<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

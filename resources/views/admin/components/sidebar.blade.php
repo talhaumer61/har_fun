@@ -38,9 +38,9 @@
 
                 <!-- Start::slide -->
                 <li class="slide">
-                    <a href="#" class="side-menu__item">
+                    <a href="/" class="side-menu__item">
                         <i class="ri-settings-5-line animate-spin header-link-icon side-menu__icon"></i>
-                        <span class="side-menu__label">Settings</span>
+                        <span class="side-menu__label">View Website</span>
                     </a>
                 </li>
                 <!-- End::slide -->
@@ -67,28 +67,11 @@
                     </a>
                     <ul class="slide-menu child1">
                         <li class="slide side-menu__label1"><a href="javascript:void(0)">Jobs</a></li>
-                        <li class="slide"><a href="#" class="side-menu__item">List</a></li>
+                        <li class="slide"><a href="/portal/jobs-posted" class="side-menu__item">List</a></li>
                         <li class="slide"><a href="#" class="side-menu__item">Completed</a></li>
                         <li class="slide"><a href="#" class="side-menu__item">Pending</a></li>
                     </ul>
                 </li>
-                <!-- End::slide -->
-
-                <!-- Start::slide -->
-                <li class="slide has-sub">
-                    <a href="javascript:void(0);" class="side-menu__item">
-                        <i class="ti ti-user-search side-menu__icon"></i>
-                        <span class="side-menu__label">Sellers</span>
-                        <i class="ri ri-arrow-right-s-line side-menu__angle"></i>
-                    </a>
-                    <ul class="slide-menu child1">
-                        <li class="slide side-menu__label1"><a href="javascript:void(0)">Sellers</a></li>
-                        <li class="slide"><a href="#" class="side-menu__item">List</a></li>
-                        <li class="slide"><a href="#" class="side-menu__item">Requests</a></li>
-                        
-                    </ul>
-                </li>
-                <!-- End::slide -->
 
                 <li class="slide ">
                     <a href="{{ route('admin.categories') }}" class="side-menu__item">

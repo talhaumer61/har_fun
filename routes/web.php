@@ -3,18 +3,26 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\admin\AdminDashboardController;
+use App\Http\Controllers\ChatController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\site\ConversationController;
 use App\Http\Controllers\site\CustomerDashboardController;
+use App\Http\Controllers\site\CustomerMyJobsController;
 use App\Http\Controllers\site\JobPostController;
 use App\Http\Controllers\site\ProposalController;
 use App\Http\Controllers\site\SellerDashboardController;
 use App\Http\Controllers\site\SiteHomeController;
 use App\Http\Controllers\site\SiteJobsController;
 use App\Http\Controllers\site\SiteSellersController;
+use App\Http\Controllers\site\WorkerProfileController;
+use App\Http\Controllers\WorkerPortfolioController;
 use App\Http\Middleware\admin\AuthenticateAdmin;
 use App\Http\Middleware\site\AuthenticateCustomer;
 use App\Http\Middleware\site\AuthenticateSeller;
 use App\Http\Middleware\admin\RedirectIfAuthenticated;
+use App\Http\Middleware\site\AuthenticateUser;
 use App\Http\Middleware\site\NormalizeRouteCase;
+use App\Models\Message;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -40,7 +48,9 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
     // Job detail
     Route::get('/job/{href}', [SiteJobsController::class, 'show']);
 
-    Route::get('/sellers/{id?}', [SiteSellersController::class,'index']);
+    Route::get('/sellers', [SiteSellersController::class,'index']);
+    Route::get('/sellers/{slug}', [SiteSellersController::class, 'show']);
+
 
     // ROUTES FOR NON_LOGGED USERS
     Route::middleware([RedirectIfAuthenticated::class])->group(function () {
@@ -62,15 +72,40 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
         });
     });
 
+    Route::middleware([AuthenticateUser::class])->group(function () {
+        Route::get('/messages', [MessageController::class, 'index'])->name('chat.index');
+        Route::post('/messages/send', [MessageController::class, 'send'])->name('chat.send');
+        Route::get('/messages/fetch-new', [MessageController::class, 'fetchNewMessages']);
+
+    });
     // SELLER DASHBOARD ROUTES
     Route::middleware([AuthenticateSeller::class])->group(function () {
         Route::get('/seller-dashboard', [SellerDashboardController::class, 'index']);
-        Route::get('/seller-profile/{id?}', [SellerDashboardController::class, 'seller_profile']);
+        // Route::get('/seller-profile/{id?}', [SellerDashboardController::class, 'seller_profile']);
+         Route::get('/seller-profile', [WorkerProfileController::class, 'edit'])->name('worker.profile.edit');
+        Route::post('/profile', [WorkerProfileController::class, 'update'])->name('worker.profile.update');
+
         Route::get('/my-resume/{id?}', [SellerDashboardController::class, 'my_resume']);
-        Route::get('/seller/messages', [SellerDashboardController::class, 'seller_messages']);
         Route::get('/job-alerts', [SellerDashboardController::class, 'job_alerts']);
         Route::get('/saved-jobs', [SellerDashboardController::class, 'saved_jobs']);
 
+        // Show "My Portfolio" page
+        Route::get('/my-portfolio', [WorkerPortfolioController::class, 'index'])->name('portfolio.index');
+
+        // Create new portfolio (submitted via modal form)
+        Route::post('/portfolio/store', [WorkerPortfolioController::class, 'store'])->name('portfolio.store');
+
+        // Get single portfolio for editing (used in AJAX to prefill modal)
+        Route::get('/portfolio/{id}/edit', [WorkerPortfolioController::class, 'edit'])->name('portfolio.edit');
+
+        // Update portfolio (submitted via modal form)
+        Route::put('/portfolio/{id}', [WorkerPortfolioController::class, 'update'])->name('portfolio.update');
+
+
+        // Delete portfolio
+        Route::delete('/portfolio/{id}', [WorkerPortfolioController::class, 'destroy'])->name('portfolio.destroy');
+
+        
         Route::post('/submit-proposal', [ProposalController::class, 'store'])->name('submit.proposal');
 
         Route::get('/log-out', [AuthController::class, 'logout']);
@@ -79,13 +114,14 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
 
     // CUSTOMER DASHBOARD ROUTES
     Route::middleware([AuthenticateCustomer::class])->group(function () {
+        
         Route::get('/dashboard', [CustomerDashboardController::class, 'index']);
         Route::get('/customer-profile/{id?}', [CustomerDashboardController::class, 'customer_profile']);
-        Route::get('/my-jobs', [CustomerDashboardController::class, 'my_jobs']);
-        Route::get('/customer/messages', [CustomerDashboardController::class, 'customer_messages']);
+
+        Route::get('/my-jobs/{action?}/{href?}', [CustomerMyJobsController::class, 'index']);
+
         Route::get('/post-job', [JobPostController::class, 'index']);
         Route::post('/post-job', [JobPostController::class, 'postJob'])->name('job.submit');
-
 
         Route::get('/saved-sellers', [CustomerDashboardController::class, 'saved_sellers']);
         Route::get('/memberships', [CustomerDashboardController::class, 'memberships']);
@@ -106,7 +142,7 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
             Route::post('/login', [AuthController::class, 'login'])->name('login.post');
         });
 
-        // **Admin-Only Routes (Protected by AuthenticateAdmin)**
+        // Admin-Only Routes (Protected by AuthenticateAdmin)**
         Route::middleware([AuthenticateAdmin::class])->group(function () {
             Route::get('/', [AdminDashboardController::class, 'index']);
             // Job Categories
@@ -116,6 +152,8 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
 
             // Users
             Route::get('/users/{action?}/{href?}', [AdminDashboardController::class, 'users'])->name('admin.users');
+
+            Route::get('/jobs-posted', [AdminDashboardController::class, 'jobs_posted'])->name('admin.jobs_posted');
 
             Route::post('/delete-record', [DatabaseController::class, 'deleteRecord'])->name('delete.record');
             Route::get('/logout', [AuthController::class, 'logout']);

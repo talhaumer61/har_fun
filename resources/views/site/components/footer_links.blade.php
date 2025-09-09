@@ -2,6 +2,7 @@
 		<button class="scroll-top">
 			<i class="bi bi-arrow-up-short"></i>
 		</button>
+	</div> <!-- /.main-page-wrapper -->
 
 
 
@@ -169,9 +170,11 @@
 				});
 			});
 		</script>
-		
 
-	</div> <!-- /.main-page-wrapper -->
+		@stack('scripts')
+
+		
+		@stack('chat-scripts')
 </body>
 
 

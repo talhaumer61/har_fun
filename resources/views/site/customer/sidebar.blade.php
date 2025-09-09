@@ -39,15 +39,15 @@
                     <img src="{{asset('site/dashboard/icon/icon_1.svg')}}" alt="" class="lazy-img">
                     <span>Dashboard</span>
                 </a></li>
-                <li><a href="/customer-profile" class="d-flex w-100 align-items-center">
+                {{-- <li><a href="/customer-profile" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_2.svg')}}" alt="" class="lazy-img">
                     <span>My Profile</span>
-                </a></li>
+                </a></li> --}}
                 <li><a href="/my-jobs" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_3.svg')}}" alt="" class="lazy-img">
                     <span>My Jobs</span>
                 </a></li>
-                <li><a href="/customer/messages" class="d-flex w-100 align-items-center">
+                <li><a href="/messages" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_4.svg')}}" alt="" class="lazy-img">
                     <span>Messages</span>
                 </a></li>
@@ -59,10 +59,10 @@
                     <img src="{{asset('site/dashboard/icon/icon_6.svg')}}" alt="" class="lazy-img">
                     <span>Saved Sellers</span>
                 </a></li>
-                <li><a href="/memberships" class="d-flex w-100 align-items-center">
+                {{-- <li><a href="/memberships" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_40.svg')}}" alt="" class="lazy-img">
                     <span>Membership</span>
-                </a></li>
+                </a></li> --}}
                 <li><a href="/account-settings" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_7.svg')}}" alt="" class="lazy-img">
                     <span>Account Settings</span>
@@ -74,16 +74,16 @@
             </ul>
         </nav>
         <!-- /.dasboard-main-nav -->
-        <div class="profile-complete-status">
+        {{-- <div class="profile-complete-status">
             <div class="progress-value fw-500">87%</div>
             <div class="progress-line position-relative">
                 <div class="inner-line" style="width:80%;"></div>
             </div>
             <p>Profile Complete</p>
-        </div>
+        </div> --}}
         <!-- /.profile-complete-status -->
 
-        <a href="#" class="d-flex w-100 align-items-center logout-btn">
+        <a href="logout" class="d-flex w-100 align-items-center logout-btn">
             <img src="{{asset('site/dashboard/icon/icon_9.svg')}}" alt="" class="lazy-img">
             <span>Logout</span>
         </a>

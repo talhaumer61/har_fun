@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('hf_jobs', function (Blueprint $table) {
             $table->bigIncrements('job_id'); // Primary Key
-            $table->integer('job_status')->default(1); // 1: Active, 2: Inactive
+            $table->integer('job_status')->default(2); // 0:Cancelled, 1: Completed, 2: Pending, 3:In Progress
             $table->unsignedBigInteger('id_customer');
             $table->string('job_title');
             $table->string('job_href');

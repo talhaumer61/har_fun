@@ -24,7 +24,7 @@ class SiteJobsController extends Controller
                 $jobs = DB::table('hf_jobs')
                     ->join('hf_job_categories', 'hf_jobs.id_cat', '=', 'hf_job_categories.cat_id')
                     ->where('hf_jobs.id_cat', $category->cat_id)
-                    ->where('hf_jobs.job_status', 1)
+                    ->where('hf_jobs.job_status', 2)
                     ->where('hf_jobs.is_deleted', false)
                     ->select('hf_jobs.*', 'hf_job_categories.cat_icon')
                     ->get();
@@ -41,7 +41,7 @@ class SiteJobsController extends Controller
             // All active jobs with cat_icon
             $jobs = DB::table('hf_jobs')
                 ->join('hf_job_categories', 'hf_jobs.id_cat', '=', 'hf_job_categories.cat_id')
-                ->where('hf_jobs.job_status', 1)
+                ->where('hf_jobs.job_status', 2)
                 ->where('hf_jobs.is_deleted', false)
                 ->select('hf_jobs.*', 'hf_job_categories.cat_icon')
                 ->get();
@@ -58,7 +58,7 @@ class SiteJobsController extends Controller
             ->join('cities', 'hf_jobs.id_city', '=', 'cities.id')
             ->join('hf_job_categories', 'hf_jobs.id_cat', '=', 'hf_job_categories.cat_id')
             ->where('hf_jobs.job_href', $href)
-            ->where('hf_jobs.job_status', 1)
+            ->where('hf_jobs.job_status', 2)
             ->where('hf_jobs.is_deleted', false)
             ->where('users.is_deleted', false)
             ->select(

@@ -8,12 +8,12 @@
         </div>
         <div class="user-data">
             <div class="user-avatar online position-relative rounded-circle">
-                <img src="{{asset('site/dashboard/avatar_01.jpg')}}" alt="" class="lazy-img">
+                <img src="{{session('user')->photo}}" alt="" class="lazy-img">
             </div>
             <!-- /.user-avatar -->
             <div class="user-name-data">
                 <button class="user-name dropdown-toggle" type="button" id="profile-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    Rashed Kabir
+                    {{session('user')->name}}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="profile-dropdown">
                     <li>
@@ -35,7 +35,7 @@
                     <img src="{{asset('site/dashboard/icon/icon_32.svg')}}" alt="" class="lazy-img">
                     <span>Back to Home</span>
                 </a></li>
-                <li><a href="/dashboard/seller" class="d-flex w-100 align-items-center active">
+                <li><a href="/seller-dashboard" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_1_active.svg')}}" alt="" class="lazy-img">
                     <span>Dashboard</span>
                 </a></li>
@@ -43,11 +43,11 @@
                     <img src="{{asset('site/dashboard/icon/icon_2.svg')}}" alt="" class="lazy-img">
                     <span>My Profile</span>
                 </a></li>
-                <li><a href="/my-resume" class="d-flex w-100 align-items-center">
+                <li><a href="/my-portfolio" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_3.svg')}}" alt="" class="lazy-img">
-                    <span>Resume</span>
+                    <span>Portfolio</span>
                 </a></li>
-                <li><a href="/seller/messages" class="d-flex w-100 align-items-center">
+                <li><a href="/messages" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_4.svg')}}" alt="" class="lazy-img">
                     <span>Messages</span>
                 </a></li>
@@ -70,13 +70,13 @@
             </ul>
         </nav>
         <!-- /.dasboard-main-nav -->
-        <div class="profile-complete-status">
+        {{-- <div class="profile-complete-status">
             <div class="progress-value fw-500">87%</div>
             <div class="progress-line position-relative">
                 <div class="inner-line" style="width:80%;"></div>
             </div>
             <p>Profile Complete</p>
-        </div>
+        </div> --}}
         <!-- /.profile-complete-status -->
 
         <a href="/log-out" class="d-flex w-100 align-items-center logout-btn">
@@ -131,7 +131,7 @@
                         </li>
                     </ul>
                 </div>
-                <div><a href="/post-job" class="job-post-btn tran3s">Post a Job</a></div>
+                {{-- <div><a href="/post-job" class="job-post-btn tran3s">Post a Job</a></div> --}}
             </div>
         </header>
         <!-- End Header -->

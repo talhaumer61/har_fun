@@ -1,141 +1,114 @@
-        <h2 class="main-title">My Profile</h2>
 
-        <div class="bg-white card-box border-20">
-            <div class="user-avatar-setting d-flex align-items-center mb-30">
-                <img src="{{asset('site/dashboard/avatar_02.jpg')}}" alt="" class="lazy-img user-img">
-                <div class="upload-btn position-relative tran3s ms-4 me-3">
-                    Upload new photo
-                    <input type="file" id="uploadImg" name="uploadImg" placeholder="">
-                </div>
-                <button class="delete-btn tran3s">Delete</button>
-            </div>
-            <!-- /.user-avatar-setting -->
-            <div class="dash-input-wrapper mb-30">
-                <label for="">Full Name*</label>
-                <input type="text" placeholder="Md Rashed Kabir">
-            </div>
-            <!-- /.dash-input-wrapper -->
-            <div class="dash-input-wrapper">
-                <label for="">Bio*</label>
-                <textarea class="size-lg" placeholder="Write something interesting about you...."></textarea>
-                <div class="alert-text">Brief description for your profile. URLs are hyperlinked.</div>
-            </div>
-            <!-- /.dash-input-wrapper -->
-        </div>
-        <!-- /.card-box -->
-
-        <div class="bg-white card-box border-20 mt-40">
-            <h4 class="dash-title-three">Social Media</h4>
-
-            <div class="dash-input-wrapper mb-20">
-                <label for="">Network 1</label>
-                <input type="text" placeholder="https://www.facebook.com/zubayer0145">
-            </div>
-            <!-- /.dash-input-wrapper -->
-            <div class="dash-input-wrapper mb-20">
-                <label for="">Network 2</label>
-                <input type="text" placeholder="https://twitter.com/FIFAcom">
-            </div>
-            <!-- /.dash-input-wrapper -->
-            <a href="#" class="dash-btn-one"><i class="bi bi-plus"></i> Add more link</a>
-        </div>
-        <!-- /.card-box -->
-
-        <div class="bg-white card-box border-20 mt-40">
-            <h4 class="dash-title-three">Address & Location</h4>
-            <div class="row">
-                <div class="col-12">
-                    <div class="dash-input-wrapper mb-25">
-                        <label for="">Address*</label>
-                        <input type="text" placeholder="Cowrasta, Chandana, Gazipur Sadar">
-                    </div>
-                    <!-- /.dash-input-wrapper -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="dash-input-wrapper mb-25">
-                        <label for="">Country*</label>
-                        <select class="nice-select">
-                            <option>Afghanistan</option>
-                            <option>Albania</option>
-                            <option>Algeria</option>
-                            <option>Andorra</option>
-                            <option>Angola</option>
-                            <option>Antigua and Barbuda</option>
-                            <option>Argentina</option>
-                            <option>Armenia</option>
-                            <option>Australia</option>
-                            <option>Austria</option>
-                            <option>Azerbaijan</option>
-                            <option>Bahamas</option>
-                            <option>Bahrain</option>
-                            <option>Bangladesh</option>
-                            <option>Barbados</option>
-                            <option>Belarus</option>
-                            <option>Belgium</option>
-                            <option>Belize</option>
-                            <option>Benin</option>
-                            <option>Bhutan</option>
-                        </select>
-                    </div>
-                    <!-- /.dash-input-wrapper -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="dash-input-wrapper mb-25">
-                        <label for="">City*</label>
-                        <select class="nice-select">
-                            <option>Dhaka</option>
-                            <option>Tokyo</option>
-                            <option>Delhi</option>
-                            <option>Shanghai</option>
-                            <option>Mumbai</option>
-                            <option>Bangalore</option>
-                        </select>
-                    </div>
-                    <!-- /.dash-input-wrapper -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="dash-input-wrapper mb-25">
-                        <label for="">Zip Code*</label>
-                        <input type="number" placeholder="1708">
-                    </div>
-                    <!-- /.dash-input-wrapper -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="dash-input-wrapper mb-25">
-                        <label for="">State*</label>
-                        <select class="nice-select">
-                            <option>Dhaka</option>
-                            <option>Tokyo</option>
-                            <option>Delhi</option>
-                            <option>Shanghai</option>
-                            <option>Mumbai</option>
-                            <option>Bangalore</option>
-                        </select>
-                    </div>
-                    <!-- /.dash-input-wrapper -->
-                </div>
-                <div class="col-12">
-                    <div class="dash-input-wrapper mb-25">
-                        <label for="">Map Location*</label>
-                        <div class="position-relative">
-                            <input type="text" placeholder="XC23+6XC, Moiran, N105">
-                            <button class="location-pin tran3s"><img src="{{asset('site/dashboard/icon/icon_16.svg')}}" alt="" class="lazy-img m-auto"></button>
-                        </div>
-                        <div class="map-frame mt-30">
-                            <div class="gmap_canvas h-100 w-100">
-                                <iframe class="gmap_iframe h-100 w-100" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=dhaka%20collage&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.dash-input-wrapper -->
-                </div>
+<form action="{{ route('worker.profile.update') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <h2 class="main-title">My Profile</h2>
+    <div class="bg-white card-box border-20">
+        <div class="user-avatar-setting d-flex align-items-center mb-30">
+            <img id="previewImg"
+                src="{{ $profile->profile_picture ? asset($profile->profile_picture) : asset('site/dashboard/avatar_02.jpg') }}"
+                class="lazy-img user-img"
+                style="width: 100px; height: 100px; object-fit: cover;">
+            
+            <div class="upload-btn position-relative tran3s ms-4 me-3">
+                Upload new photo
+                <input type="file" name="profile_picture" id="profile_picture_input" onchange="previewImage(this)">
             </div>
         </div>
-        <!-- /.card-box -->
 
-        <div class="button-group d-inline-flex align-items-center mt-30">
-            <a href="#" class="dash-btn-two tran3s me-3">Save</a>
-            <a href="#" class="dash-cancel-btn tran3s">Cancel</a>
-        </div>				
+        <div class="dash-input-wrapper mb-30">
+            <label>Full Name*</label>
+            <input type="text" value="{{ $user->name }}" disabled>
+        </div>
+        <div class="dash-input-wrapper mb-20">
+            <label for="category">Select Category</label>
+            <select name="category_id" class="form-control" class="nice-select" required>
+                <option value="">-- Choose Category --</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->cat_id }}" {{ $profile->category_id == $category->cat_id ? 'selected' : '' }}>
+                        {{ $category->cat_name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="dash-input-wrapper mb-30">
+            <label>Headline</label>
+            <input type="text" name="headline" value="{{ old('headline', $profile->headline) }}">
+        </div>
+        <div class="dash-input-wrapper mb-30">
+            <label>Tagline</label>
+            <input type="text" name="tagline" value="{{ old('tagline', $profile->tagline) }}">
+        </div>
+        <div class="dash-input-wrapper mb-30">
+            <label>Bio*</label>
+            <textarea name="bio">{{ old('bio', $profile->bio) }}</textarea>
+        </div>
     </div>
-</div>
+
+    <div class="bg-white card-box border-20 mt-40">
+        <h4>Contact & Availability</h4>
+        <div class="dash-input-wrapper mb-20">
+            <label>Phone</label>
+            <input type="text" name="phone" value="{{ old('phone', $profile->phone) }}">
+        </div>
+        <div class="dash-input-wrapper mb-20">
+            <label>Experience (years)</label>
+            <input type="number" name="experience_years" value="{{ old('experience_years', $profile->experience_years) }}">
+        </div>
+        <div class="dash-input-wrapper mb-20">
+            <label>Working Hours</label>
+            <input type="text" name="working_hours" value="{{ old('working_hours', $profile->working_hours) }}">
+        </div>
+        <div class="dash-input-wrapper mb-20">
+            <label>Availability</label>
+            <select name="availability" class="nice-select">
+                <option value="">Choose Availability...</option>
+                <option value="available" {{ $profile->availability == 'available' ? 'selected' : '' }}>Available</option>
+                <option value="not_available" {{ $profile->availability == 'not_available' ? 'selected' : '' }}>Not Available</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="bg-white card-box border-20 mt-40">
+        <h4>Address & Location</h4>
+        <div class="dash-input-wrapper mb-25">
+            <label>Address*</label>
+            <input type="text" name="address" value="{{ old('address', $profile->address) }}">
+        </div>
+        <div class="dash-input-wrapper mb-25">
+            <label>City*</label>
+            <select name="city_id" class="nice-select">
+                <option value="">Select City...</option>
+                @foreach($cities as $city)
+                    <option value="{{ $city->id }}" {{ $profile->city_id == $city->id ? 'selected' : '' }}>{{ $city->name }}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+
+    {{-- <div class="bg-white card-box border-20 mt-40">
+        <h4>Resume</h4>
+        <div class="dash-input-wrapper mb-25">
+            <label>Upload Resume</label>
+            <input type="file" name="resume">
+            @if($profile->resume)
+                <a href="{{ asset('storage/' . $profile->resume) }}" target="_blank">View Resume</a>
+            @endif
+        </div>
+    </div> --}}
+
+    <div class="button-group d-inline-flex align-items-center mt-30">
+        <button class="dash-btn-two tran3s me-3" type="submit">Save</button>
+        <a href="#" class="dash-cancel-btn tran3s">Cancel</a>
+    </div>
+</form>
+
+
+<script>
+    function previewImage(input) {
+        const file = input.files[0];
+        if (file) {
+            document.getElementById('previewImg').src = URL.createObjectURL(file);
+        }
+    }
+</script>

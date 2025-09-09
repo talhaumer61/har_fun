@@ -15,6 +15,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    public $timestamps = false;
     protected $fillable = [
         'name',
         'username',
@@ -59,4 +61,25 @@ class User extends Authenticatable
         'status' => 'integer',
         'login_type' => 'integer',
     ];
+
+    public function conversationsAsClient()
+    {
+        return $this->hasMany(Conversation::class, 'client_id');
+    }
+
+    public function conversationsAsWorker()
+    {
+        return $this->hasMany(Conversation::class, 'worker_id');
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'sender_id');
+    }
+
+    public function workerProfile()
+    {
+        return $this->hasOne(WorkerProfile::class, 'user_id');
+    }
+
 }

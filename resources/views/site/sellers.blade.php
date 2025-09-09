@@ -1,7 +1,7 @@
-@include('site.components.header', ['title' => isset($seller) ? 'Seller Detail - HARFUN' : 'Sellers - HARFUN'])
+@include('site.components.header', ['title' => isset($user) && isset($profile) ? 'Worker Detail - HARFUN' : 'Sellers - HARFUN'])
 
-    @if (isset($seller))
-        @include('site.components.sellers.seller_title',['seller_name' =>  $seller['name']])
+    @if (isset($user) && isset($profile))
+        @include('site.components.sellers.seller_title',['seller_name' =>  $user['name']])
         @include('site.components.sellers.seller_profile')
     @else
         @include('site.components.sellers.search_banner')

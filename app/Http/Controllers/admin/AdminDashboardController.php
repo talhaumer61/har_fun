@@ -8,6 +8,8 @@ use App\Models\JobCategory;
 use Illuminate\Support\Str;
 use App\Models\User;
 use Yajra\DataTables\DataTables;
+    use Illuminate\Support\Facades\DB;
+
 
 
 
@@ -20,6 +22,25 @@ class AdminDashboardController extends Controller
     {
         return view('admin.'.get_logintypes(session('user')->login_type).'.dashboard');
     }
+
+
+    public function jobs_posted()
+    {
+        $jobs = DB::table('hf_jobs')
+            ->join('users', 'hf_jobs.id_customer', '=', 'users.id')
+            ->select(
+                'hf_jobs.*',
+                'users.name as customer_name',
+                'users.email as customer_email',
+                'users.phone as customer_phone'
+            )
+            ->where('hf_jobs.is_deleted', false)
+            ->orderBy('hf_jobs.date_added', 'desc')
+            ->get();
+
+        return view('admin.headoffice.jobs_posted', compact('jobs'));
+    }
+
 
     public function job_categories(Request $request, $action = 'list', $href = null)
     {

@@ -19,7 +19,13 @@
                                     </div>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOne">
                                         <div class="accordion-body">
-                                            <p>Our founders Dustin Moskovitz and Justin lorem Rosenstein met while leading Engineering teams at Facebook quesi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <p>
+                                                At Har-Fun, we are a passionate team driven by one mission — to bridge the gap between local talent and meaningful opportunities. Whether you're a skilled worker looking for jobs or someone in need of reliable services, we provide a trusted platform that connects you directly with the right people in your community.
+                                                <br>
+                                                We believe that talent isn't limited to big cities or corporate offices — it's found in every neighborhood, waiting to be discovered. That's why we've built a simple, user-friendly solution that empowers individuals to showcase their skills, build their reputation, and find consistent work without middlemen or unnecessary delays.
+                                                <br>
+                                                Har-Fun is more than just a job board — it's a growing local ecosystem where work meets workers, trust meets convenience, and communities thrive together.
+                                            </p>
                                         </div>
                                     </div>
                                     </div>
@@ -31,7 +37,13 @@
                                     </div>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOne">
                                             <div class="accordion-body">
-                                            <p>Our founders Dustin Moskovitz and Justin lorem Rosenstein met while leading Engineering teams at Facebook quesi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <p>
+                                                Our goal is simple — to empower local workers and simplify hiring for everyone.
+                                                <br>
+                                                We aim to create a trusted digital space where job seekers can find reliable work opportunities, and clients can easily connect with skilled professionals in their area. By removing barriers and bringing everything under one platform, we’re making local hiring faster, fairer, and more accessible.
+                                                <br>
+                                                Whether it’s daily tasks or specialized services, we strive to make every job a step toward growth, dignity, and financial stability for our users.
+                                            </p>
                                         </div>
                                     </div>
                                     </div>
@@ -43,7 +55,11 @@
                                     </div>
                                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionOne">
                                             <div class="accordion-body">
-                                            <p>Our founders Dustin Moskovitz and Justin lorem Rosenstein met while leading Engineering teams at Facebook quesi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <p>
+                                                Our vision is to become the leading platform for local job connections, where every skilled individual has the opportunity to grow, and every client can find trusted help with ease.
+                                                <br>
+                                                We envision a future where local communities thrive through technology, where work is just a few clicks away, and where no talent goes unnoticed. By connecting people at the grassroots level, we aim to build a more inclusive, empowered, and self-sustaining workforce — one job at a time.
+                                            </p>
                                         </div>
                                     </div>
                                     </div>

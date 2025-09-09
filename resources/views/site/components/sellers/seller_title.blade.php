@@ -1,4 +1,4 @@
-<div class="inner-banner-one position-relative">
+{{-- <div class="inner-banner-one position-relative">
     <div class="container">
         <div class="candidate-profile-card list-layout">
             <div class="d-flex align-items-start align-items-xl-center">
@@ -44,6 +44,23 @@
                 </div>
             </div>
         </div> 
+    </div>
+    <img src="{{asset('site/images/shape/shape_02.svg')}}" alt="" class="lazy-img shapes shape_01">
+    <img src="{{asset('site/images/shape/shape_03.svg')}}" alt="" class="lazy-img shapes shape_02">
+</div> --}}
+
+<div class="inner-banner-one position-relative">
+    <div class="container">
+        <div class="position-relative">
+            <div class="row">
+                <div class="col-xl-6 m-auto text-center">
+                    <div class="title-two">
+                        <h2 class="text-white">{{ $seller_name }}</h2>
+                    </div>
+                    <p class="text-lg text-white mt-30 lg-mt-20 mb-35 lg-mb-20">{{ $profile->category->cat_name ?? 'N/A' }}</p>
+                </div>
+            </div>
+        </div>
     </div>
     <img src="{{asset('site/images/shape/shape_02.svg')}}" alt="" class="lazy-img shapes shape_01">
     <img src="{{asset('site/images/shape/shape_03.svg')}}" alt="" class="lazy-img shapes shape_02">

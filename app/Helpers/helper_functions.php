@@ -153,3 +153,23 @@ function getCategories() {
     // Return the categories
     return $categories;
 }
+
+function get_jobstatus($id = '') {
+    $jobstatus = array (
+        array('id'=>0, 'name'=>'Cancelled'), 
+        array('id'=>1, 'name'=>'Completed'),
+        array('id'=>2, 'name'=>'Pending'),
+        array('id'=>3, 'name'=>'In Progress'),
+    );
+    $listjobstatus= array (
+        '0' => '<span class="label label-danger rounded p-1">Cancelled</span>', 
+        '1' => '<span class="label label-success rounded p-1">Completed</span>',
+        '2' => '<span class="label label-warning rounded p-1">Pending</span>',
+        '3' => '<span class="label label-primary rounded p-1">In Progress</span>',
+    );
+    if(!empty($id)){
+        return $listjobstatus[$id];
+    }else{
+        return $jobstatus;
+    }
+}
