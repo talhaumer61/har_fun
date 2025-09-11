@@ -194,7 +194,7 @@ class AuthController extends Controller
             sendRemark('Signup & Login Successful', '4', $userId);
             sessionMsg('success', 'Signup Successful, You are now logged in!', 'success');
 
-            return redirect('/');
+            // return redirect('/');
             // Redirect based on user type
             // if ($user->login_type == 2) {
             //     return redirect('/dashboard'); // Customer dashboard

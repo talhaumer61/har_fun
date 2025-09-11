@@ -5,6 +5,8 @@ use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\SellerJobController;
 use App\Http\Controllers\site\ConversationController;
 use App\Http\Controllers\site\CustomerDashboardController;
 use App\Http\Controllers\site\CustomerMyJobsController;
@@ -16,6 +18,7 @@ use App\Http\Controllers\site\SiteJobsController;
 use App\Http\Controllers\site\SiteSellersController;
 use App\Http\Controllers\site\WorkerProfileController;
 use App\Http\Controllers\WorkerPortfolioController;
+use App\Http\Controllers\WorkerStripeController;
 use App\Http\Middleware\admin\AuthenticateAdmin;
 use App\Http\Middleware\site\AuthenticateCustomer;
 use App\Http\Middleware\site\AuthenticateSeller;
@@ -87,7 +90,9 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
 
         Route::get('/my-resume/{id?}', [SellerDashboardController::class, 'my_resume']);
         Route::get('/job-alerts', [SellerDashboardController::class, 'job_alerts']);
-        Route::get('/saved-jobs', [SellerDashboardController::class, 'saved_jobs']);
+        Route::get('/ongoing-jobs', [SellerDashboardController::class, 'ongoing_jobs'])->name('worker.ongoing.jobs');
+        Route::post('/worker/job/{jobId}/complete', [SellerJobController::class, 'markCompleted'])->name('worker.job.complete');
+
 
         // Show "My Portfolio" page
         Route::get('/my-portfolio', [WorkerPortfolioController::class, 'index'])->name('portfolio.index');
@@ -108,6 +113,11 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
         
         Route::post('/submit-proposal', [ProposalController::class, 'store'])->name('submit.proposal');
 
+        Route::get('/worker/connect/start', [WorkerStripeController::class, 'startOnboarding'])->name('worker.connect.start');
+        Route::get('/worker/connect/refresh', [WorkerStripeController::class, 'refreshOnboarding'])->name('worker.connect.refresh');
+        Route::get('/worker/connect/return', [WorkerStripeController::class, 'returnOnboarding'])->name('worker.connect.return');
+
+
         Route::get('/log-out', [AuthController::class, 'logout']);
 
     });
@@ -119,6 +129,12 @@ Route::middleware([NormalizeRouteCase::class])->group(function () {
         Route::get('/customer-profile/{id?}', [CustomerDashboardController::class, 'customer_profile']);
 
         Route::get('/my-jobs/{action?}/{href?}', [CustomerMyJobsController::class, 'index']);
+        Route::post('/proposals/accept', [CustomerMyJobsController::class, 'accept'])->name('proposals.accept');
+
+        Route::post('/customer/job/{jobId}/complete', [CustomerMyJobsController::class, 'markCompletedByCustomer'])->name('customer.job.complete');
+        
+        Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
+        Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
 
         Route::get('/post-job', [JobPostController::class, 'index']);
         Route::post('/post-job', [JobPostController::class, 'postJob'])->name('job.submit');

@@ -29,12 +29,31 @@
                                     {{-- Attachment --}}
                                     @if($proposal->attachment)
                                         <p><a class="fw-bold" href="{{ asset($proposal->attachment) }}" target="_blank">Download Attachment</a></p>
-                                    @endif     
-                                    <form method="GET" action="{{ route('chat.index') }}">
-                                        <input type="hidden" name="user_id" value="{{ $proposal->worker_id }}"> {{-- or user_id --}}
-                                        <input type="hidden" name="job_id" value="{{ $proposal->job_id }}"> {{-- job ID from proposal --}}
-                                        <button type="submit" class="btn btn-sm btn-primary">Message</button>
-                                    </form>
+                                    @endif 
+                                    <div class="d-flex justify-content-start gap-2">
+                                        {{-- Message Button --}}
+                                        <form method="GET" action="{{ route('chat.index') }}">
+                                            <input type="hidden" name="user_id" value="{{ $proposal->worker_id }}"> {{-- or user_id --}}
+                                            <input type="hidden" name="job_id" value="{{ $proposal->job_id }}"> {{-- job ID from proposal --}}
+                                            <button type="submit" class="btn btn-sm btn-primary">Message</button>
+                                        </form>
+                                        <form method="POST" action="{{ route('proposals.accept') }}" class="accept-form">
+                                            @csrf
+                                            <input type="hidden" name="proposal_id" value="{{ $proposal->id }}">
+                                            <input type="hidden" name="job_id" value="{{ $proposal->job_id }}">
+                                            <input type="hidden" name="worker_id" value="{{ $proposal->worker_id }}">
+                                            <input type="hidden" name="job_amount" value="{{ $proposal->bid_amount }}">
+                                            <input type="hidden" name="worker_name" value="{{ $proposal->name }}">
+
+                                            <button type="button"
+                                                class="btn btn-sm btn-success"
+                                                onclick="confirmAccept(this)">
+                                                Accept Proposal
+                                            </button>
+                                        </form>
+
+
+                                    </div>    
                                
                                 </div>
                             </div>
@@ -67,4 +86,32 @@
         }
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function confirmAccept(btn) {
+        let form = btn.closest('form');
+        let workerName = form.querySelector('input[name="worker_name"]').value;
+        let amount = form.querySelector('input[name="job_amount"]').value;
+
+        Swal.fire({
+            title: 'Accept Proposal?',
+            html: `
+                <p><strong>Worker:</strong> ${workerName}</p>
+                <p><strong>Amount:</strong> Rs. ${amount}</p>
+            `,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, Accept',
+            cancelButtonText: 'Cancel',
+            confirmButtonColor: '#198754', // Bootstrap green
+            cancelButtonColor: '#6c757d',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                form.submit();
+            }
+        });
+    }
+</script>
 @endpush
+
+

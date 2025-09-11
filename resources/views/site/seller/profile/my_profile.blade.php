@@ -85,6 +85,17 @@
             </select>
         </div>
     </div>
+    <div class="bg-white card-box border-20 mt-40">
+        <h4>Payment Account</h4>
+        @if (empty(session('user')->stripe_account_id))
+            <a href="{{ route('worker.connect.start') }}" class="btn btn-secondary">
+                💳 Set up payout account
+            </a>
+        @else
+            <p class="text-success">✅ Payout account connected.</p>
+        @endif
+
+    </div>
 
     {{-- <div class="bg-white card-box border-20 mt-40">
         <h4>Resume</h4>

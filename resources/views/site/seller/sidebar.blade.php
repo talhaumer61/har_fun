@@ -55,9 +55,9 @@
                     <img src="{{asset('site/dashboard/icon/icon_5.svg')}}" alt="" class="lazy-img">
                     <span>Job Alert</span>
                 </a></li>
-                <li><a href="/saved-jobs" class="d-flex w-100 align-items-center">
+                <li><a href="/ongoing-jobs" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_6.svg')}}" alt="" class="lazy-img">
-                    <span>Saved Job</span>
+                    <span>Ongoing Job</span>
                 </a></li>
                 <li><a href="/account-settings" class="d-flex w-100 align-items-center">
                     <img src="{{asset('site/dashboard/icon/icon_7.svg')}}" alt="" class="lazy-img">
