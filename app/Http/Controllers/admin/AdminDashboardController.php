@@ -15,13 +15,76 @@ use Yajra\DataTables\DataTables;
 
 class AdminDashboardController extends Controller
 {
-    // public function index(){
-    //     return view('admin.dashboard');
-    // }
     public function index()
     {
-        return view('admin.'.get_logintypes(session('user')->login_type).'.dashboard');
+        // Total users (only type 2 and 3)
+        $totalUsers = DB::table('users')
+            ->whereIn('login_type', [2, 3])
+            ->count();
+
+        // Total customers (type 2)
+        $totalCustomers = DB::table('users')
+            ->where('login_type', 2)
+            ->count();
+
+        // Total workers (type 3)
+        $totalWorkers = DB::table('users')
+            ->where('login_type', 3)
+            ->count();
+
+        // Fetch recent 5 users with login_type = 2
+        $recentType2 = DB::table('users')
+            ->where('login_type', 2)
+            ->orderBy('id', 'desc')
+            ->limit(5)
+            ->get();
+
+        // Fetch recent 5 workers (type 3) with profile + city
+        $recentType3 = DB::table('users')
+            ->join('worker_profiles', 'users.id', '=', 'worker_profiles.user_id')
+            ->leftJoin('cities', 'worker_profiles.city_id', '=', 'cities.id')
+            ->leftJoin('hf_job_categories', 'worker_profiles.category_id', '=', 'hf_job_categories.cat_id')
+            ->where('users.login_type', 3)
+            ->orderBy('users.id', 'desc')
+            ->limit(5)
+            ->select(
+                'users.*',
+                'worker_profiles.*',
+                'hf_job_categories.cat_name as category_name',
+                'cities.name as city_name'
+            )
+            ->get();
+
+        // Finance cards
+        $totalPayments = DB::table('hf_payments')
+            ->where('status', 'paid')
+            ->sum('amount');
+
+        $totalCommission = DB::table('hf_payments')
+            ->where('status', 'released')
+            ->sum('commission');
+
+        $totalWorkerEarnings = DB::table('hf_payments')
+            ->where('status', 'released')
+            ->sum('worker_amount');
+
+       $monthlyFinance = DB::table('hf_payments')
+            ->select(
+                DB::raw("DATE_FORMAT(created_at, '%Y-%m') as month"),
+                DB::raw("SUM(CASE WHEN status = 'paid' THEN amount ELSE 0 END) as total_amount"),
+                DB::raw("SUM(CASE WHEN status = 'released' THEN commission ELSE 0 END) as total_commission"),
+                DB::raw("SUM(CASE WHEN status = 'released' THEN worker_amount ELSE 0 END) as total_worker_amount")
+            )
+            ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
+            ->orderBy('month')
+            ->get();
+
+            
+        return view('admin.' . get_logintypes(session('user')->login_type) . '.dashboard', compact(
+            'totalUsers', 'totalCustomers', 'totalWorkers', 'recentType2', 'recentType3'
+            , 'totalPayments', 'totalCommission', 'totalWorkerEarnings', 'monthlyFinance'));
     }
+
 
 
     public function jobs_posted()

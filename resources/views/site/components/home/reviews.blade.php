@@ -12,7 +12,6 @@
 					<div class="item">
 						<div class="feedback-block-one color-two">
 							<div class="logo">
-								<img src="{{asset('site/images/logo/media_27.png')}}" alt="">
 							</div>
 							<blockquote class="fw-500 mt-50 md-mt-30 mb-50 md-mb-30 text-white">“Seattle opera simplifies Performance planning with deski eSignature.”</blockquote>
 							<div class="name text-white"><span class="fw-500">Rashed kabir,</span> Lead Designer</div>
@@ -32,7 +31,6 @@
 					<div class="item">
 						<div class="feedback-block-one color-two">
 							<div class="logo">
-								<img src="{{asset('site/images/logo/media_28.png')}}" alt="">
 							</div>
 							<blockquote class="fw-500 mt-50 md-mt-30 mb-50 md-mb-30 text-white">“How DocuSign CLM helps Celonis scale its global business.”</blockquote>
 							<div class="name text-white"><span class="fw-500">Mark Joge,</span> Marketing Chief</div>
@@ -52,7 +50,6 @@
 					<div class="item">
 						<div class="feedback-block-one color-two">
 							<div class="logo">
-								<img src="{{asset('site/images/logo/media_27.png')}}" alt="">
 							</div>
 							<blockquote class="fw-500 mt-50 md-mt-30 mb-50 md-mb-30 text-white">“Seattle opera simplifies Performance planning with deski eSignature.”</blockquote>
 							<div class="name text-white"><span class="fw-500">Rashed kabir,</span> Lead Designer</div>

@@ -1,5 +1,4 @@
 @include("site.components.header_links")
-
 <header class="theme-main-menu menu-overlay menu-style-one sticky-menu">
 	<div class="inner-content position-relative">
 		<div class="top-header">
@@ -15,19 +14,19 @@
 						<!-- <li class="d-none d-md-block"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li> -->
 						@if(session()->has('user'))
 							@if(session('user')->login_type == 1)
-								<li class="d-none d-md-block me-1"><a href="/portal/logout" class="btn-one w-100">Logout</a></li>
-								<li class="d-none d-md-block"><a href="/portal" class="btn-one w-100">Dashboard</a></li>
+								<li class="d-none d-md-block me-1"><a href="/portal/logout" class="btn-one w-100">{{ __('Logout') }}</a></li>
+								<li class="d-none d-md-block"><a href="/portal" class="btn-one w-100">{{ __('Dashboard') }}</a></li>
 							@elseif(session('user')->login_type == 2)
-								<li class="d-none d-md-block me-1"><a href="/logout" class="btn-one w-100">Logout</a></li>
-								<li class="d-none d-md-block"><a href="/dashboard" class="btn-one w-100">Dashboard</a></li>
+								<li class="d-none d-md-block me-1"><a href="/logout" class="btn-one w-100">{{ __('Logout') }}</a></li>
+								<li class="d-none d-md-block"><a href="/dashboard" class="btn-one w-100">{{ __('Dashboard') }}</a></li>
 							@elseif(session('user')->login_type == 3)
-								<li class="d-none d-md-block me-1"><a href="/log-out" class="btn-one w-100">Logout</a></li>
-								<li class="d-none d-md-block"><a href="/seller-dashboard" class="btn-one w-100">Dashboard</a></li>
+								<li class="d-none d-md-block me-1"><a href="/log-out" class="btn-one w-100">{{ __('Logout') }}</a></li>
+								<li class="d-none d-md-block"><a href="/seller-dashboard" class="btn-one w-100">{{ __('Dashboard') }}</a></li>
 							@endif
 							
 						@else
-							<li><a href="/sign-in" class="login-btn-one" >Login</a></li>
-							<li class="d-none d-md-block ms-4"><a href="/sign-up" class="btn-one">Register</a></li>
+							<li><a href="/sign-in" class="login-btn-one" >{{ __('Login') }}</a></li>
+							<li class="d-none d-md-block ms-4"><a href="/sign-up" class="btn-one">{{ __('Register') }}</a></li>
 						@endif
 					</ul>
 				</div> <!--/.right-widget-->
@@ -39,9 +38,42 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav align-items-lg-center">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle d-flex align-items-center mx-1 "
+								href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+								style="background: rgba(255, 255, 255, 0.1);
+										line-height: 33px;
+										padding: 0 17px;
+										border-radius: 25px;
+										color: #d2f34c;">
+									<i class="bi bi-translate me-1"></i> {{ __('Language') }}
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item d-flex justify-content-between align-items-center"
+										href="{{ route('lang.switch', 'en') }}">
+											English
+											@if(app()->getLocale() === 'en')
+												<i class="bi bi-check2 text-success"></i>
+											@endif
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item d-flex justify-content-between align-items-center"
+										href="{{ route('lang.switch', 'ur') }}">
+											اردو
+											@if(app()->getLocale() === 'ur')
+												<i class="bi bi-check2 text-success"></i>
+											@endif
+										</a>
+									</li>
+								</ul>
+							</li>
+
+
 							<li class="d-block d-lg-none"><div class="logo"><a href="/" class="d-block"><img src="{{asset('site/images/logo/logo_01.png')}}" alt="" width="100"></a></div></li>
 							<li class="nav-item dropdown category-btn mega-dropdown-sm">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><i class="bi bi-grid-fill"></i> Category</a>
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><i class="bi bi-grid-fill"></i> {{ __('Category') }}</a>
 								<ul class="dropdown-menu category-dropdown">
 									<li class="row gx-0">
 										@foreach(getCategories() as $category)
@@ -80,38 +112,45 @@
 								</ul>
 							</li> --}}
 							<li class="nav-item">
-								<a class="nav-link" href="/home">Home</a>
+								<a class="nav-link" href="/home">{{ __('Home') }}</a>
 							</li>
 							<li class="nav-item dropdown">
-								<a class="nav-link" href="/jobs">Jobs</a>
+								<a class="nav-link" href="/jobs">{{ __('Jobs') }}</a>
 							</li>
 							<li class="nav-item dropdown mega-dropdown-sm">
-								<a class="nav-link" href="/sellers">Sellers</a>
+								<a class="nav-link" href="/sellers">{{ __('Workers') }}</a>
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-									data-bs-auto-close="outside" aria-expanded="false">More...
+									data-bs-auto-close="outside" aria-expanded="false">{{ __('More') }} ...
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="contact" class="dropdown-item"><span>Contact Us</span></a></li>
-									<li><a href="about-us" class="dropdown-item"><span>About Us</span></a></li>
-									<li><a href="faq" class="dropdown-item"><span>Faq's</span></a></li>
+									<li><a href="contact" class="dropdown-item"><span>{{ __('Contact Us') }}</span></a></li>
+									<li><a href="about-us" class="dropdown-item"><span>{{ __('About Us') }}</span></a></li>
+									<li><a href="faq" class="dropdown-item"><span>{{ __('Faqs') }}</span></a></li>
 								</ul>
 							</li>
+							{{-- <li>
+								<span style="float:right;">
+									{{ __('Language') }}:
+									<a href="lang/en">English</a>
+									<a href="{{ route('lang.switch', 'ur') }}">اردو</a>
+								</span>
+							</li> --}}
 							@if(session()->has('user'))
 								@if(session('user')->login_type == 1)
-									<li class="d-md-none"><a href="/logout" class="btn-one w-100">Logout</a></li>
-									<li class="d-md-none"><a href="/portal" class="btn-one w-100">Dashboard</a></li>
+									<li class="d-md-none"><a href="/logout" class="btn-one w-100">{{ __('Logout') }}</a></li>
+									<li class="d-md-none"><a href="/portal" class="btn-one w-100">{{ __('Dashboard') }}</a></li>
 								@elseif(session('user')->login_type == 2)
-									<li class="d-md-none"><a href="/logout" class="btn-one w-100">Logout</a></li>
-									<li class="d-md-none"><a href="/dashboard" class="btn-one w-100">Dashboard</a></li>
+									<li class="d-md-none"><a href="/logout" class="btn-one w-100">{{ __('Logout') }}</a></li>
+									<li class="d-md-none"><a href="/dashboard" class="btn-one w-100">{{ __('Dashboard') }}</a></li>
 								@elseif(session('user')->login_type == 3)
-									<li class="d-md-none"><a href="/log-out" class="btn-one w-100">Logout</a></li>
-									<li class="d-md-none"><a href="/seller-dashboard" class="btn-one w-100">Dashboard</a></li>
+									<li class="d-md-none"><a href="/log-out" class="btn-one w-100">{{ __('Logout') }}</a></li>
+									<li class="d-md-none"><a href="/seller-dashboard" class="btn-one w-100">{{ __('Dashboard') }}</a></li>
 								@endif
 							@else
-								<li class="d-md-none me-1"><a href="/post-job" class="job-post-btn tran3s">Post Job</a></li>
-								<li class="d-md-none"><a href="/sign-up" class="btn-one w-100">Register</a></li>
+								<li class="d-md-none me-1"><a href="/post-job" class="job-post-btn tran3s">{{ __('Post Job') }}</a></li>
+								<li class="d-md-none"><a href="/sign-up" class="btn-one w-100">{{ __('Register') }}</a></li>
 							@endif
 							
 						</ul>

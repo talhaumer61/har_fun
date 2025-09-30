@@ -167,7 +167,11 @@ class CustomerMyJobsController extends Controller
             app(PaymentController::class)->releasePayment($jobId);
         }
 
-        return back()->with('msg', 'Job marked as completed from your side!');
+        return redirect()->back()->with([
+            'msg' => 'Job marked as completed from your side!',
+            'show_review_modal' => $jobId // pass jobId to show modal
+        ]);
+
     }
 
     // public function accept(Request $request)

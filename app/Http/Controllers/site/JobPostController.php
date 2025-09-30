@@ -18,7 +18,7 @@ class JobPostController extends Controller
                                     ->select('cat_id', 'cat_name')
                                     ->get();
         // Fetch all cities with id and name
-        $cities = DB::table('cities')->select('id', 'name')->get();
+        $cities = DB::table('cities')->select('id', 'name')->orderBy('name', 'asc')->get();
         // Pass categories to the view
         return view('site.customer.post_job', compact('categories', 'cities'));
     }
@@ -30,7 +30,7 @@ class JobPostController extends Controller
             'id_city' => 'nullable|integer',
             'job_budget' => 'required|string',
             'job_overview' => 'required|string',
-            'job_desc' => 'required|string',
+            'job_desc' => 'string',
             'job_photo' => 'nullable|file|mimes:pdf,doc,docx,jpg,jpeg,png|max:2048',
             'job_location' => 'required|string'
         ]);

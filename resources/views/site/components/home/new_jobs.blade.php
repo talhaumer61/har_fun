@@ -3,12 +3,12 @@
                 <div class="row justify-content-between align-items-center">
 					<div class="col-lg-6">
 						<div class="title-one">
-							<h2 class="text-dark">New job listing</h2>
+							<h2 class="text-dark">{{__('New job listing')}}</h2>
 						</div>
 					</div>
 					<div class="col-lg-5">
 						<div class="d-flex justify-content-lg-end">
-							<a href="/jobs" class="btn-six d-none d-lg-inline-block">Explore all jobs</a>
+							<a href="/jobs" class="btn-six d-none d-lg-inline-block">{{__('Explore all jobs')}}</a>
 						</div>
 					</div>
 				</div>
@@ -59,11 +59,12 @@
                 <!-- /.job-listing-wrapper -->
 
 				<div class="text-center mt-40 d-lg-none">
-					<a href="/jobs" class="btn-six">Explore all jobs</a>
+					<a href="/jobs" class="btn-six">{{__('Explore all jobs')}}</a>
 				</div>
 
 				<div class="text-center mt-80 lg-mt-30 wow fadeInUp">
-					<div class="btn-eight fw-500">Do you want to post a job for your company? <span>We can help.</span> <a href="sign-up">Click here</a></div>
+					<div class="btn-eight fw-500">{{__('Do you want to post a job?')}}  </div>
+					<div><a href="sign-up" class="btn text-success" style="text-decoration: underline">{{__('Click here')}}</a></div>
 				</div>
             </div>
         </section>

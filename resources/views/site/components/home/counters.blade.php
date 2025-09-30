@@ -1,27 +1,5 @@
         <section class="fancy-banner-four mt-180 xl-mt-150 lg-mt-100">
 			<div class="container">
-				<div class="bg-wrapper position-relative wow fadeInUp">
-					<div class="row">
-						<div class="col-lg-6 order-lg-last ms-auto">
-							<div class="text-wrapper wow fadeInRight">
-								<div class="title-one mb-45 lg-mb-30">
-									<h2 class="text-white">Get the job of your dreams quickly.</h2>
-								</div>
-								<p class="text-white text-md mb-55 lg-mb-30">Commonly used in the graphic, print publishing industris for previewing visual mockups. limited social discrimination.</p>
-                                <a href="/jobs" class="find-job-btn d-flex align-items-center text-white">
-                                    <span class="fw-500">Find your job.</span>
-                                    <span class="ms-1"> <u>Explore all</u></span>
-                                    <span class="ms-auto"><i class="bi bi-chevron-right"></i></span>
-                                </a>
-							</div>
-						</div>
-                        <div class="col-lg-6 order-lg-first">
-                            <div class="img-meta me-xl-4 position-relative">
-                                <img src="{{asset('site/images/assets/screen_14.png')}}" alt="" class="lazy-img shapes screen_01">
-                            </div>
-                        </div>
-					</div>
-				</div>
                 <!-- /.bg-wrapper -->
                 <div class="border-bottom pb-50 lg-pb-20 mt-110 xl-mt-80 lg-mt-30">
 					<div class="row">

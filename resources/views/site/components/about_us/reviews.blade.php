@@ -11,9 +11,6 @@
         <div class="row feedback-slider-one">
             <div class="item">
                 <div class="feedback-block-one">
-                    <div class="logo">
-                        <img src="{{asset('site/images/logo/media_01.png')}}" alt="">
-                    </div>
                     <blockquote class="fw-500 mt-50 md-mt-30 mb-50 md-mb-30">“Seattle opera simplifies Performance planning with jobi eSignature.”</blockquote>
                     <div class="name text-dark"><span class="fw-500">Rashed kabir,</span> Lead Designer</div>
                     <div class="review pt-40 md-pt-20 mt-40 md-mt-30 d-flex justify-content-between align-items-center">
@@ -31,9 +28,6 @@
             </div>
             <div class="item">
                 <div class="feedback-block-one">
-                    <div class="logo">
-                        <img src="{{asset('site/images/logo/media_02.png')}}" alt="">
-                    </div>
                     <blockquote class="fw-500 mt-50 md-mt-30 mb-50 md-mb-30">“How DocuSign CLM helps Celonis scale its global business.”</blockquote>
                     <div class="name text-dark"><span class="fw-500">Mark Joge,</span> Marketing Chief</div>
                     <div class="review pt-40 md-pt-20 mt-40 md-mt-30 d-flex justify-content-between align-items-center">
@@ -51,9 +45,6 @@
             </div>
             <div class="item">
                 <div class="feedback-block-one">
-                    <div class="logo">
-                        <img src="{{asset('site/images/logo/media_01.png')}}" alt="">
-                    </div>
                     <blockquote class="fw-500 mt-50 md-mt-30 mb-50 md-mb-30">“Seattle opera simplifies Performance planning with jobi eSignature.”</blockquote>
                     <div class="name text-dark"><span class="fw-500">Rashed kabir,</span> Lead Designer</div>
                     <div class="review pt-40 md-pt-20 mt-40 md-mt-30 d-flex justify-content-between align-items-center">

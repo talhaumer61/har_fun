@@ -75,6 +75,47 @@
         </div>
     </div>
 </div>
+@if (session('show_review_modal'))
+<div class="modal fade" id="reviewModal" tabindex="-1">
+  <div class="modal-dialog">
+    <form method="POST" action="{{ route('customer.review.store', session('show_review_modal')) }}">
+        @csrf
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Leave a Review</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Rating</label>
+                    <select name="rating" id="rating" class="form-control" required>
+                        <option value="">Select</option>
+                        @for ($i=1; $i<=5; $i++)
+                            <option value="{{ $i }}">{{ $i }} Star{{ $i>1 ? 's' : '' }}</option>
+                        @endfor
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="review_text" class="form-label">Review</label>
+                    <textarea name="review_text" class="form-control" rows="3" placeholder="Write your feedback..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Submit Review</button>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var reviewModal = new bootstrap.Modal(document.getElementById('reviewModal'));
+        reviewModal.show();
+    });
+</script>
+@endif
+
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>

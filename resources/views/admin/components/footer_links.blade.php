@@ -46,7 +46,7 @@
 
 
     <!-- Apex Charts JS -->
-    <script src="{{asset('admin/libs/apexcharts/apexcharts.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <!-- Swiper JS -->
     <script src="{{asset('admin/libs/swiper/swiper-bundle.min.js')}}"></script>
@@ -145,6 +145,76 @@
 
 
     </script>
+    @if (isset($monthlyFinance))
+        {{-- Finance Chart --}}    
+        <script>
+            var months = @json($monthlyFinance->pluck('month'));
+            var totalAmounts = @json($monthlyFinance->pluck('total_amount'));
+            var commissions = @json($monthlyFinance->pluck('total_commission'));
+            var workerAmounts = @json($monthlyFinance->pluck('total_worker_amount'));
+
+            var options = {
+                series: [
+                    {
+                        name: 'Total Revenue',
+                        data: totalAmounts
+                    },
+                    {
+                        name: 'Commission',
+                        data: commissions
+                    },
+                    {
+                        name: 'Worker Payout',
+                        data: workerAmounts
+                    }
+                ],
+                chart: {
+                    type: 'bar',
+                    height: 350
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '25%',  // makes bars thin
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: true,
+                    formatter: function (val) {
+                        return val ? val.toFixed(0) : '';
+                    }
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                xaxis: {
+                    categories: months
+                },
+                yaxis: {
+                    title: {
+                        text: 'Amount (PKR)'
+                    }
+                },
+                fill: {
+                    opacity: 1
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return "PKR " + val;
+                        }
+                    }
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#financeChart"), options);
+            chart.render();
+        </script>
+    @endif
+
 
 </body>
 

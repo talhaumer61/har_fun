@@ -3,11 +3,11 @@
 				<div class="position-relative pt-200 md-pt-150 pb-150 xl-pb-120 md-pb-80">
 					<div class="row">
 						<div class="col-lg-6">
-							<h1>Find & Hire <span>Top 3% of expert on Har-Fun.</span></h1>
-							<p class="text-lg text-white mt-40 md-mt-30 mb-50 md-mb-30">We delivered blazing fast & striking work solution</p>
+							<h1>{{__('Find & Hire')}} <span>{{__('Top 3% of expert on Har-Fun.')}}</span></h1>
+							<p class="text-lg text-white mt-40 md-mt-30 mb-50 md-mb-30">{{__('We delivered blazing fast & striking work solution')}}</p>
 						</div>
 					</div>
-					<div class="position-relative">
+					{{-- <div class="position-relative">
 						<div class="row">
 							<div class="col-xl-9 col-lg-8">
 								<div class="job-search-one position-relative me-xl-5">
@@ -55,7 +55,7 @@
 								<!-- /.job-search-one -->
 							</div>
 						</div>
-					</div>
+					</div> --}}
 
 					<div class="img-box">
 						<img src="{{asset('site/images/shape/shape_01.svg')}}" alt="" class="lazy-img shapes">

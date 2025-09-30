@@ -88,6 +88,7 @@ class PaymentController extends Controller
         $jobAmountUSD = $jobAmountPKR * $conversionRate;
         $commissionUSD = $jobAmountUSD * $commissionRate;
         $payoutAmountUSD = $jobAmountUSD - $commissionUSD;
+        $payoutAmountUSD = $payoutAmountUSD + 30;
 
         // Convert to cents for Stripe transfer
         $payoutAmountCents = intval(round($payoutAmountUSD * 100));
@@ -103,7 +104,8 @@ class PaymentController extends Controller
 
         // ----- Convert commission & payout back to PKR for DB -----
         $commissionPKR   = $commissionUSD / $conversionRate;
-        $workerAmountPKR = $payoutAmountUSD / $conversionRate;
+        // $workerAmountPKR = $payoutAmountUSD / $conversionRate;
+        $workerAmountPKR = $jobAmountPKR - $commissionPKR;
 
         // Update DB payments table
         DB::table('hf_payments')->insert([

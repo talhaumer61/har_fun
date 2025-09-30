@@ -99,10 +99,10 @@
                 <button class="dash-mobile-nav-toggler d-block d-md-none me-auto">
                     <span></span>
                 </button>
-                <form action="#" class="search-form">
+                {{-- <form action="#" class="search-form">
                     <input type="text" placeholder="Search here..">
                     <button><img src="{{asset('site/dashboard/icon/icon_10.svg')}}" alt="" class="lazy-img m-auto"></button>
-                </form>
+                </form> --}}
                 <div class="profile-notification ms-2 ms-md-5 me-4">
                     <button class="noti-btn dropdown-toggle" type="button" id="notification-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                         <img src="{{asset('site/dashboard/icon/icon_11.svg')}}" alt="" class="lazy-img">

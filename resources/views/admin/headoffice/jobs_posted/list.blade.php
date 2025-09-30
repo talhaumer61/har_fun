@@ -42,6 +42,7 @@
                                             <th>Title</th>
                                             <th>Customer</th>
                                             <th>Budget</th>
+                                            <th>Final Amount</th>
                                             <th>Status</th>
                                             <th>Date Posted</th>
                                             {{-- <th width="80" class="text-center">Action</th> --}}
@@ -62,6 +63,14 @@
                                                 </td>
                                                 <td>
                                                     {{ number_format($job->job_budget) }}
+                                                </td>
+                                                <td>
+                                                    @if ($job->job_amount && $job->job_amount > 0)
+                                                        {{ number_format($job->job_amount) }}
+                                                        
+                                                    @else
+                                                        'N/A'
+                                                    @endif
                                                 </td>
                                                 <td>
                                                     @php
