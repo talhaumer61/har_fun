@@ -123,7 +123,34 @@
                                 @endforeach
                             </div>
                         </div>
-                        @endif
+                    @endif
+
+                    <!-- Reviews Section -->
+                    @if($user->reviewsReceived->count() > 0)
+                        <div class="inner-card mb-75 lg-mb-50">
+                            <h3 class="title">Client Reviews ({{ $user->reviewsReceived->count() }})</h3>
+                            @foreach($user->reviewsReceived as $review)
+                                <div class="border rounded-4 shadow-sm p-4 mb-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <div class="fw-semibold">{{ $review->customer->name ?? 'Anonymous' }}</div>
+                                        <div>
+                                            @for ($i = 1; $i <= 5; $i++)
+                                                <i class="bi bi-star{{ $i <= $review->rating ? '-fill text-warning' : '' }}"></i>
+                                            @endfor
+                                        </div>
+                                    </div>
+                                    <p class="mb-2 text-muted" style="font-style: italic;">{{ $review->review_text }}</p>
+                                    <small class="text-secondary">{{ \Carbon\Carbon::parse($review->created_at)->format('M d, Y') }}</small>
+                                </div>
+                            @endforeach
+                        </div>
+                    @else
+                        <div class="inner-card mb-75 lg-mb-50">
+                            <h3 class="title">Client Reviews</h3>
+                            <p class="text-muted fst-italic">No reviews yet.</p>
+                        </div>
+                    @endif
+
 
 
                 </div>
@@ -131,34 +158,44 @@
 
             <!-- RIGHT SIDEBAR -->
             <div class="col-xxl-3 col-lg-4">
-                <div class="cadidate-profile-sidebar ms-xl-5 ms-xxl-0 md-mt-60">
-                    <div class="cadidate-bio bg-wrapper mb-60 md-mb-40">
-                        <ul class="style-none">
-                            <li class="border-0"><span>Location:</span><div>{{ $profile->city->name ?? 'N/A' }}</div></li>
-                            {{-- <li><span>Age:</span><div>{{ $profile->age ?? 'N/A' }}</div></li> --}}
-                            <li class="border-0"><span>Experience:</span><div>{{ $profile->experience_years.' Years' ?? 'N/A' }}</div></li>
-                            <li class="border-0"><span>Working Hours:</span><div>{{ $profile->working_hours.' Hours' ?? 'N/A' }}</div></li>
-                            <li class="border-0"><span>Availability:</span><div>{{ ucwords($profile->availability) ?? 'N/A' }}</div></li>
-                            <li><span>Email:</span><div><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></div></li>
-                            {{-- <li><span>Qualification:</span><div>{{ $profile->qualification ?? 'N/A' }}</div></li>
-                            <li><span>Gender:</span><div>{{ $profile->gender ?? 'N/A' }}</div></li>
-                            <li><span>Expected Salary:</span><div>{{ $profile->expected_salary ?? 'N/A' }}</div></li>
-                            <li>
-                                <span>Social:</span>
-                                <div>
-                                    @if($profile->facebook)<a href="{{ $profile->facebook }}"><i class="bi bi-facebook"></i></a>@endif
-                                    @if($profile->instagram)<a href="{{ $profile->instagram }}"><i class="bi bi-instagram"></i></a>@endif
-                                    @if($profile->twitter)<a href="{{ $profile->twitter }}"><i class="bi bi-twitter"></i></a>@endif
-                                    @if($profile->linkedin)<a href="{{ $profile->linkedin }}"><i class="bi bi-linkedin"></i></a>@endif
-                                </div>
-                            </li> --}}
-                        </ul>
-                        @if($profile->resume)
-                        <a href="{{ asset($profile->resume) }}" class="btn-ten fw-500 text-white w-100 text-center tran3s mt-15" download>Download CV</a>
-                        @endif
-                    </div>
-                </div>
+    <div class="cadidate-profile-sidebar ms-xl-5 ms-xxl-0 md-mt-60">
+        <div class="cadidate-bio bg-wrapper mb-60 md-mb-40 text-center py-3">
+
+            {{-- Worker Profile Photo --}}
+            @php
+                $profilePic = $profile->profile_picture 
+                    ? asset($profile->profile_picture)
+                    : asset('images/default_user.png')
+            @endphp
+            <div class="d-flex justify-content-center">
+                <img src="{{ $profilePic }}" alt="{{ $user->name }}" class="rounded-circle shadow-sm mb-3" style="width: 130px; height: 130px; object-fit: cover; border: 3px solid #f1f1f1;">
             </div>
+
+            {{-- Name & Headline --}}
+            <h5 class="fw-600 mb-1">{{ $user->name }}</h5>
+            <p class="text-muted small mb-4">{{ $profile->headline ?? 'Freelancer' }}</p>
+
+            {{-- Worker Info List --}}
+            <ul class="style-none text-start">
+                <li class="border-0"><span>Location:</span><div>{{ $profile->city->name ?? 'N/A' }}</div></li>
+                <li class="border-0"><span>Experience:</span><div>{{ $profile->experience_years ? $profile->experience_years . ' Years' : 'N/A' }}</div></li>
+                <li class="border-0"><span>Working Hours:</span><div>{{ $profile->working_hours ? $profile->working_hours . ' Hours' : 'N/A' }}</div></li>
+                <li class="border-0"><span>Availability:</span><div>{{ ucwords($profile->availability ?? 'N/A') }}</div></li>
+                <li><span>Email:</span><div><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></div></li>
+            </ul>
+
+            {{-- Resume Download Button --}}
+            @if($profile->resume)
+                <a href="{{ asset($profile->resume) }}" 
+                   class="btn-ten fw-500 text-white w-100 text-center tran3s mt-15" 
+                   download>
+                   Download CV
+                </a>
+            @endif
+        </div>
+    </div>
+</div>
+
         </div>
         @if (session('user') && session('user')->login_type == 2)   
             <form method="GET" action="{{ route('chat.index') }}">

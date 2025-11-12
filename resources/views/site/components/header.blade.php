@@ -83,7 +83,7 @@
 														<img src="{{ asset(''. $category->cat_icon.'') }}" alt="" class="lazy-img">
 													</div>
 													<div class="ps-3 flex-fill">
-														<div class="fw-500 text-dark">{{ $category->cat_name }}</div>
+														<div class="fw-500 text-dark">{{__( $category->cat_name )}}</div>
 														<div class="job-count">
 															<!-- Assuming you want to display job count; you can adjust according to your needs -->
 															{{-- {{ $category->job_count }} Jobs --}}
@@ -96,7 +96,7 @@
 									
 									<li>
 										<a href="/jobs" class="explore-all-btn d-flex align-items-center justify-content-between tran3s">
-											<span class="fw-500">Explore all fields</span>
+											<span class="fw-500">{{__('Explore all fields')}}</span>
 											<span class="icon"><i class="bi bi-chevron-right"></i></span>
 										</a>
 									</li>

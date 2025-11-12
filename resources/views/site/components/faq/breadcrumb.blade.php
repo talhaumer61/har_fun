@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col-xl-6 m-auto text-center">
                     <div class="title-two">
-                        <h2 class="text-white">Question &amp; Answers</h2>
+                        <h2 class="text-white">{{__('Questions & Answers')}}</h2>
                     </div>
-                    <p class="text-lg text-white mt-30 lg-mt-20">Find your answers</p>
+                    <p class="text-lg text-white mt-30 lg-mt-20">{{__('Find your answers')}}</p>
                 </div>
             </div>
             

@@ -38,17 +38,17 @@
 									</div>
 									<!-- Display Job Categories -->
 									<div class="job-category">
-											<a href="/jobs/{{ $job->cat_href }}">{{ $job->cat_name }}</a>
+											<a href="/jobs/{{ $job->cat_href }}">{{ __($job->cat_name) }}</a>
 									</div>
 								</div>
 								<div class="col-lg-2 col-md-4">
 									<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
 										<!-- Save Job Button -->
-										<a href="/jobs/{{ $job->job_href }}" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job">
+										{{-- <a href="/jobs/{{ $job->job_href }}" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job">
 											<i class="bi bi-bookmark-dash"></i>
-										</a>
+										</a> --}}
 										<!-- Apply Button -->
-										<a href="/jobs/{{ $job->job_href }}" class="apply-btn text-center tran3s">APPLY</a>
+										<a href="/jobs/{{ $job->job_href }}" class="apply-btn text-center tran3s">{{__('Apply')}}</a>
 									</div>
 								</div>
 							</div>

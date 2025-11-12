@@ -3,7 +3,7 @@
 				<div class="row">
 					<div class="col-lg-5 col-md-6">
 						<div class="title-one mb-65 md-mb-50">
-							<h2 class="text-dark">Trusted by leading startups.</h2>
+							<h2 class="text-dark">{{__('Trusted by community')}}</h2>
 						</div>
 					</div>
 				</div>

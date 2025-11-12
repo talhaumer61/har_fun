@@ -56,13 +56,14 @@ Route::middleware([SetLocale::class])->group(function () {
         Route::get('/about-us', [SiteHomeController::class,'about_us']);
         Route::get('/faq', [SiteHomeController::class,'faq']);
         Route::get('/account-settings', [SiteHomeController::class,'account_settings']);
-        Route::get('/change-password', [SiteHomeController::class,'change_password']);
         Route::get('/jobs/{category?}', [SiteJobsController::class,'index']);
         // Job detail
         Route::get('/job/{href}', [SiteJobsController::class, 'show']);
 
         Route::get('/sellers', [SiteSellersController::class,'index']);
         Route::get('/sellers/{slug}', [SiteSellersController::class, 'show']);
+        Route::get('/search-sellers', [SiteSellersController::class, 'searchSellers']);
+
 
 
         // ROUTES FOR NON_LOGGED USERS
@@ -89,6 +90,9 @@ Route::middleware([SetLocale::class])->group(function () {
             Route::get('/messages', [MessageController::class, 'index'])->name('chat.index');
             Route::post('/messages/send', [MessageController::class, 'send'])->name('chat.send');
             Route::get('/messages/fetch-new', [MessageController::class, 'fetchNewMessages']);
+
+            Route::get('/change-password', [SiteHomeController::class,'change_password']);
+            Route::post('/change-password', [AuthController::class, 'changePassword'])->name('change.password');
 
         });
         // SELLER DASHBOARD ROUTES

@@ -4,36 +4,36 @@
             <div class="col-lg-5 order-lg-last">
                 <div class="ps-lg-4 wow fadeInRight">
                     <div class="title-one">
-                        <div class="sub-title">Looking for an expert?</div>
-                        <h2 class="text-dark">Find top talents from Har-Fun.</h2>
+                        <div class="sub-title">{{ __('Looking for an expert?') }}</div>
+                        <h2 class="text-dark">{{ __('Find top talents from Har-Fun') }}</h2>
                     </div>
                     <div class="accordion accordion-style-one mt-25" id="accordionOne">
                         <div class="accordion-item">
                             <div class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Seamless Search
+                                    {{__('Seamless Search')}}
                                     </button>
                             </div>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOne">
                                 <div class="accordion-body">
-                                    <p>It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand. It only takes 5 minutes.</p>
+                                    <p>{{__('Within a few minutes you can find a perfect worker for your job')}}</p>
                                 </div>
                             </div>
                             </div>
                             <div class="accordion-item">
                             <div class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Hire top talents
+                                    {{__('Hire top talents')}}
                                     </button>
                             </div>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOne">
                                     <div class="accordion-body">
-                                    <p>Practice what you learned on realistic lorem quis test questions testing.</p>
+                                    <p>{{__('You will find the most suitable and verified workers here.')}}</p>
                                 </div>
                             </div>
                             </div>
                     </div> <!-- /.accordion-style-one -->
-                    <a href="/sellers" class="btn-seven border6 mt-70 lg-mt-40">Find Talents</a>
+                    <a href="/sellers" class="btn-seven border6 mt-70 lg-mt-40">{{__('Find Talents')}}</a>
                 </div>
             </div>
             <div class="col-lg-7 col-md-8 m-auto order-lg-first">

@@ -91,7 +91,7 @@
 <body>
 	<div class="main-page-wrapper">
 		<!-- Pre Loader -->
-		<div id="preloader">
+		{{-- <div id="preloader">
 			<div id="ctn-preloader" class="ctn-preloader">
 				<div class="icon"><img src="{{asset('site/images/loader.svg')}}" alt="" class="m-auto d-block" width="100"></div>
 				<div class="txt-loading">
@@ -118,4 +118,4 @@
 					</span>
 				</div>
 			</div>
-		</div> 
+		</div>  --}}

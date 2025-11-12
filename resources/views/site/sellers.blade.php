@@ -5,7 +5,14 @@
         @include('site.components.sellers.seller_profile')
     @else
         @include('site.components.sellers.search_banner')
-        @include('site.components.sellers.list')
+
+        <!-- The section wrapper stays here -->
+        <section id="sellersContainer" class="candidates-profile bg-color pt-90 lg-pt-70 pb-160 xl-pb-150 lg-pb-80">
+            @include('site.components.sellers.list') 
+            <!-- This loads sellers initially -->
+        </section>
+
         @include('site.components.modals.sellers.filters')
+
     @endif
 @extends('site.components.footer')

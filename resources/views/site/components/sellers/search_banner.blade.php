@@ -4,55 +4,39 @@
             <div class="row">
                 <div class="col-xl-6 m-auto text-center">
                     <div class="title-two">
-                        <h2 class="text-white">Candidates</h2>
+                        <h2 class="text-white">{{__('Candidates')}}</h2>
                     </div>
-                    <p class="text-lg text-white mt-30 lg-mt-20 mb-35 lg-mb-20">Find you desire talents & make your work done</p>
+                    <p class="text-lg text-white mt-30 lg-mt-20 mb-35 lg-mb-20">
+                        {{__('Find your desired talents & make your work done')}}
+                    </p>
                 </div>
             </div>
             <div class="position-relative">
                 <div class="row">
                     <div class="col-xl-9 col-lg-8 m-auto">
                         <div class="job-search-one position-relative">
-                            <form action="">
+                            <form id="searchForm">
                                 <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="input-box">
-                                            <div class="label">What are you looking for?</div>
-                                            <select class="nice-select lg">
-                                                <option value="1">UI Designer</option>
-                                                <option value="2">Content creator</option>
-                                                <option value="3">Web Developer</option>
-                                                <option value="4">SEO Guru</option>
-                                                <option value="5">Digital marketer</option>
-                                            </select>
+                                    <div class="col-md-9 pe-0">
+                                        <div class="input-box m-0 p-0">
+                                            <input type="text" id="searchInput" class="border-0 form-control py-4" placeholder="Type to search..." autocomplete="off">
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="input-box border-left">
-                                            <div class="label">Category</div>
-                                            <select class="nice-select lg">
-                                                <option value="1">Web Design</option>
-                                                <option value="2">Design & Creative</option>
-                                                <option value="3">It & Development</option>
-                                                <option value="4">Web & Mobile Dev</option>
-                                                <option value="5">Writing</option>
-                                                <option value="6">Sales & Marketing</option>
-                                                <option value="7">Music & Audio</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <button class="fw-500 text-uppercase h-100 tran3s search-btn">Search</button>
+                                    <div class="col-md-3 ">
+                                        <button type="submit" class="ms-0 fw-500 text-uppercase h-100 tran3s search-btn">{{__('Search')}}</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <!-- /.job-search-one -->
+                        <!-- Results container -->
+                        <div id="searchResults" class="mt-4">
+                            {{-- Sellers list will load here --}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <img src="{{asset('site/images/shape/shape_02.svg')}}" alt="" class="lazy-img shapes shape_01">
-    <img src="{{asset('site/images/shape/shape_03.svg')}}" alt="" class="lazy-img shapes shape_02">
 </div>
+
+

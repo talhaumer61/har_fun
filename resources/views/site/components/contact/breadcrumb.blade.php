@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col-xl-6 m-auto text-center">
                     <div class="title-two">
-                        <h2 class="text-white">Contact Us</h2>
+                        <h2 class="text-white">{{__('Contact Us')}}</h2>
                     </div>
-                    <p class="text-lg text-white mt-30 lg-mt-20">Get in touch with us</p>
+                    <p class="text-lg text-white mt-30 lg-mt-20">{{__('Get in touch with us')}}</p>
                 </div>
             </div>
             

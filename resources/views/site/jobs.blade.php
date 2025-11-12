@@ -8,11 +8,11 @@
     {{-- All Jobs or Category-wise Jobs View --}}
     @include('site.components.jobs.search_banner')
 
-    @if($jobs->count())
+    @if($jobs->count() > 0)
         @include('site.components.jobs.list', ['jobs' => $jobs])
     @else
         <div class="text-center m-5 rounded bg-light">
-            <h4 class="py-5 text-danger">No jobs found for this category.</h4>
+            <h4 class="py-5 text-danger">No jobs found!</h4>
         </div>
     @endif
 

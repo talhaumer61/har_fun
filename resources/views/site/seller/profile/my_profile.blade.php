@@ -86,6 +86,43 @@
         </div>
     </div>
     <div class="bg-white card-box border-20 mt-40">
+        <h4>CNIC Verification</h4>
+        <div class="row">
+            {{-- CNIC Front --}}
+            <div class="col-md-6 mb-3">
+                <label>CNIC Front</label>
+                @if ($profile->cnic_front)
+                    <div class="border rounded p-2 text-center">
+                        <img src="{{ asset($profile->cnic_front) }}" 
+                            alt="CNIC Front" 
+                            style="width:100%; max-height:200px; object-fit:cover; border-radius:8px;">
+                        <p class="text-success mt-2">Already uploaded ✅</p>
+                    </div>
+                @else
+                    <input type="file" name="cnic_front" accept="image/*" class="form-control">
+                    <small class="text-muted">Upload CNIC front side (jpg, png, webp)</small>
+                @endif
+            </div>
+
+            {{-- CNIC Back --}}
+            <div class="col-md-6 mb-3">
+                <label>CNIC Back</label>
+                @if ($profile->cnic_back)
+                    <div class="border rounded p-2 text-center">
+                        <img src="{{ asset($profile->cnic_back) }}" 
+                            alt="CNIC Back" 
+                            style="width:100%; max-height:200px; object-fit:cover; border-radius:8px;">
+                        <p class="text-success mt-2">Already uploaded ✅</p>
+                    </div>
+                @else
+                    <input type="file" name="cnic_back" accept="image/*" class="form-control">
+                    <small class="text-muted">Upload CNIC back side (jpg, png, webp)</small>
+                @endif
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white card-box border-20 mt-40">
         <h4>Payment Account</h4>
         @if (empty(session('user')->stripe_account_id))
             <a href="{{ route('worker.connect.start') }}" class="btn btn-secondary">

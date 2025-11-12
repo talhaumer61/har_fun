@@ -82,4 +82,15 @@ class User extends Authenticatable
         return $this->hasOne(WorkerProfile::class, 'user_id');
     }
 
+    public function reviewsReceived()
+    {
+        return $this->hasMany(Review::class, 'worker_id');
+    }
+    
+    public function reviewsGiven()
+    {
+        return $this->hasMany(Review::class, 'customer_id');
+    }
+
+
 }

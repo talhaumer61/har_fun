@@ -2,19 +2,19 @@
     <div class="container">
         <ul class="nav nav-tabs border-0 justify-content-center" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#faq-general" role="tab">General</button>
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#faq-general" role="tab">{{__('General')}}</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-workers" role="tab">For Workers</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-workers" role="tab">{{__('For Workers')}}</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-clients" role="tab">For Clients</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-clients" role="tab">{{__('For Clients')}}</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-payments" role="tab">Payments</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-payments" role="tab">{{__('Payments')}}</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-support" role="tab">Account & Support</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-support" role="tab">{{__('Account & Support')}}</button>
             </li>
         </ul>
 
@@ -27,24 +27,24 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#general1">
-                                    What is this platform about?
+                                    {{__('What is this platform about?')}}
                                 </button>
                             </div>
                             <div id="general1" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
                                 <div class="accordion-body">
-                                    <p>Our platform connects local workers with clients who need their services. It's a simple, secure, and efficient way to find or offer work within your community.</p>
+                                    <p>{{__('Our platform connects local workers with clients who need their services. It is a simple, secure, and efficient way to find or offer work within your community.')}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#general2">
-                                    Is this platform free to use?
+                                    {{__('Is this platform free to use?')}}
                                 </button>
                             </div>
                             <div id="general2" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
                                 <div class="accordion-body">
-                                    <p>Yes, registering and browsing profiles or jobs is free. However, there may be small fees for premium features or secure payment processing.</p>
+                                    <p>{{__('Yes, registering and browsing profiles or jobs is free. However, there may be small fees for premium features or secure payment processing.')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -57,24 +57,24 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#workers1">
-                                    How can I create a worker profile?
+                                    {{__('How can I create a worker profile?')}}
                                 </button>
                             </div>
                             <div id="workers1" class="accordion-collapse collapse" data-bs-parent="#accordionWorkers">
                                 <div class="accordion-body">
-                                    <p>Sign up, complete your basic info, upload a profile picture, and describe your skills, experience, and availability. Once approved, your profile will be visible to potential clients.</p>
+                                    <p>{{__('Sign up, complete your basic info, upload a profile picture, and describe your skills, experience, and availability. Once approved, your profile will be visible to potential clients.')}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#workers2">
-                                    How do I get hired?
+                                    {{__('How do I get hired?')}}
                                 </button>
                             </div>
                             <div id="workers2" class="accordion-collapse collapse" data-bs-parent="#accordionWorkers">
                                 <div class="accordion-body">
-                                    <p>Clients can reach out to you directly, or you can apply to open job listings. A complete profile, good ratings, and quick responses increase your chances.</p>
+                                    <p>{{__('Clients can reach out to you directly, or you can apply to open job listings. A complete profile, good ratings, and quick responses increase your chances.')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -87,24 +87,24 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#clients1">
-                                    How do I post a job?
+                                    {{__('How do I post a job?')}}
                                 </button>
                             </div>
                             <div id="clients1" class="accordion-collapse collapse" data-bs-parent="#accordionClients">
                                 <div class="accordion-body">
-                                    <p>Create an account, go to your dashboard, and click on "Post a Job." Fill in details like job type, location, duration, and budget.</p>
+                                    <p>{{__('Create an account, go to your dashboard, and click on Post a Job. Fill in details like job type, location, duration, and budget.')}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#clients2">
-                                    Can I choose who to hire?
+                                    {{__('Can I choose who to hire?')}}
                                 </button>
                             </div>
                             <div id="clients2" class="accordion-collapse collapse" data-bs-parent="#accordionClients">
                                 <div class="accordion-body">
-                                    <p>Yes. You can review worker profiles, ratings, and previous job history before sending a job offer or accepting a proposal.</p>
+                                    <p>{{__('Yes. You can review worker profiles, ratings, and previous job history before sending a job offer or accepting a proposal.')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -117,24 +117,24 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#payment1">
-                                    What payment methods are supported?
+                                    {{__('What payment methods are supported?')}}
                                 </button>
                             </div>
                             <div id="payment1" class="accordion-collapse collapse" data-bs-parent="#accordionPayments">
                                 <div class="accordion-body">
-                                    <p>We support payments via bank transfer, JazzCash, Easypaisa, and major credit/debit cards depending on your region.</p>
+                                    <p>{{__('We support payments via bank transfer, JazzCash, Easypaisa, and major credit/debit cards depending on your region.')}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#payment2">
-                                    When do workers get paid?
+                                    {{__('When do workers get paid?')}}
                                 </button>
                             </div>
                             <div id="payment2" class="accordion-collapse collapse" data-bs-parent="#accordionPayments">
                                 <div class="accordion-body">
-                                    <p>Workers are paid after the client marks the job as completed or after a set duration if no dispute is raised.</p>
+                                    <p>{{__('Workers are paid after the client marks the job as completed or after a set duration if no dispute is raised.')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -147,24 +147,24 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#support1">
-                                    I forgot my password. How do I reset it?
+                                    {{__('I forgot my password. How do I reset it?')}}
                                 </button>
                             </div>
                             <div id="support1" class="accordion-collapse collapse" data-bs-parent="#accordionSupport">
                                 <div class="accordion-body">
-                                    <p>Click on “Forgot Password” at the login page, and we’ll send a reset link to your registered email or phone.</p>
+                                    <p>{{__('Click on Forgot Password at the login page, and we will send a reset link to your registered email or phone.')}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#support2">
-                                    How can I contact customer support?
+                                    {{__('How can I contact customer support?')}}
                                 </button>
                             </div>
                             <div id="support2" class="accordion-collapse collapse" data-bs-parent="#accordionSupport">
                                 <div class="accordion-body">
-                                    <p>You can reach us through the <a href="/contact">Contact Us</a> page or email us directly at support@[yourdomain].com.</p>
+                                    <p>{{__('You can reach us through the Contact Us page or email us directly at support@har-fun.com')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -176,9 +176,9 @@
 
         <div class="text-center border-bottom pb-150 lg-pb-50 mt-60 lg-mt-40 wow fadeInUp">
             <div class="title-three mb-30">
-                <h2 class="fw-normal">Didn’t find your answer?</h2>
+                <h2 class="fw-normal">{{__('Didn’t find your answer?')}}</h2>
             </div>
-            <a href="/contact" class="btn-one">Contact Us</a>
+            <a href="/contact" class="btn-one">{{__('Contact Us')}}</a>
         </div>
     </div>
 </section>

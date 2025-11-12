@@ -29,9 +29,15 @@ class SiteJobsController extends Controller
                     ->select('hf_jobs.*', 'hf_job_categories.cat_icon')
                     ->get();
 
+                $categories = DB::table('hf_job_categories')
+                    ->where('cat_status', 1)  // Assuming cat_status = 1 means active
+                    ->where('is_deleted', 0)  // Assuming is_deleted = 0 means not deleted
+                    ->get();
+
                 return view('site.jobs', [
                     'category' => $category,
-                    'jobs' => $jobs
+                    'jobs' => $jobs,
+                    'categories' => $categories
                 ]);
             } else {
                 // Invalid category href
@@ -45,8 +51,13 @@ class SiteJobsController extends Controller
                 ->where('hf_jobs.is_deleted', false)
                 ->select('hf_jobs.*', 'hf_job_categories.cat_icon')
                 ->get();
-
-            return view('site.jobs', ['jobs' => $jobs]);
+            $categories = DB::table('hf_job_categories')
+                    ->where('cat_status', 1)  // Assuming cat_status = 1 means active
+                    ->where('is_deleted', 0)  // Assuming is_deleted = 0 means not deleted
+                    ->get();
+          
+            return view('site.jobs', compact('jobs', 'categories'));
+            
         }
     }
 

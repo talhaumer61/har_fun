@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-5 col-md-6">
                 <div class="title-one text-center text-md-start mb-65 md-mb-50">
-                    <h2>Trusted by leading startups.</h2>
+                    <h2>{{__('Trusted by community')}}</h2>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
             <li class="next_b slick-arrow"><i class="bi bi-arrow-right"></i></li>
         </ul>
 
-        <div class="partner-logos border-0 pt-150 xl-pt-120 md-pt-80 sm-pt-40 pb-80 lg-pb-40">
+        {{-- <div class="partner-logos border-0 pt-150 xl-pt-120 md-pt-80 sm-pt-40 pb-80 lg-pb-40">
             <div class="partner-slider">
                 <div class="item">
                     <div class="logo d-flex align-items-center"><img src="{{asset('site/images/logo/media_03.png')}}" alt=""></div>
@@ -90,7 +90,7 @@
                     <div class="logo d-flex align-items-center"><img src="{{asset('site/images/logo/media_05.png')}}" alt=""></div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- /.partner-logos -->
     </div>
 </section>

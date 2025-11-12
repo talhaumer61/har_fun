@@ -4,12 +4,12 @@
             <div class="row">
                 <div class="col-xl-6 m-auto text-center">
                     <div class="title-two">
-                        <h2 class="text-white">About us</h2>
+                        <h2 class="text-white">{{__('About Us')}}</h2>
                     </div>
                     <ul class="style-none d-flex justify-content-center page-pagination mt-15">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/">{{__('Home')}}</a></li>
                         <li><i class="bi bi-chevron-right"></i></li>
-                        <li>About</li>
+                        <li>{{__('About Us')}}</li>
                     </ul>
                 </div>
             </div>
